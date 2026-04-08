@@ -11,7 +11,7 @@ function Navbar() {
             <div className="text-[1.1rem] font-bold">
                 <Link to="/">Jay Ph.D</Link>
             </div>
-            <div className="flex items-center gap-9 text-[1.8vh] font-medium text-[#8f8f8f]">
+            <div className="flex items-center gap-9 text-[1rem] font-medium text-[#8f8f8f]">
                 <Link to="/work" className="hover:text-white transition-colors duration-300">Work</Link>
                 <Link to="/about" className="hover:text-white transition-colors duration-300">About</Link>
                 <Link to="/publications" className="hover:text-white transition-colors duration-300">Publications</Link>

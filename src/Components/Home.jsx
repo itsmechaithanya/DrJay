@@ -168,11 +168,13 @@ function Home() {
         <div>
             <div className="w-screen h-screen bg-black overflow-hidden text-white relative">
                 <div className="w-full h-full relative">
-                    <h1 className='absolute z-10 text-[5.3vh] top-[37vh] left-[5vw] text-[#ededed]'>This is</h1>
-                    <h1 className='absolute z-10 text-[15.1vh] font-bold top-[39vh] left-[5vw]'>Dr.Jay</h1>
-                    <h1 className='absolute z-10 text-[6.2vh] top-[55vh] left-[5vw] text-[#ededed]'>Cunningham</h1>
+                    <div className='absolute z-10 top-[30vh] left-[3vw] w-full h-[22vw]'>
+                        {/* <h1 className='absolute text-[1.5rem] top-[1vh] left-[1vw] text-[#7b7b7b]'>This is</h1> */}
+                        <h1 className='absolute text-[16vw] top-[3vw] left-[2vw] leading-none whitespace-nowrap' style={{ fontFamily: "'Mr De Haviland', cursive" }}><span className='text-[#ededed]'>Dr.</span>Jay</h1>
+                        <h1 className='absolute text-[2.5vw] top-[16vw] left-[1vw] text-[#ededed]'>Cunningham</h1>
+                    </div>
 
-                    <h1 className='absolute z-10 text-[2.5vh] top-[45vh] right-[4vw] text-right leading-[3vh] text-[#ededed]'>Based in <br /> Chicago, IL</h1>
+                    <h1 className='absolute z-10 text-[1.3vw] top-1/2 -translate-y-1/2 right-[4vw] text-right leading-[2vw] text-[#ededed]'>Based in <br /> Chicago, IL</h1>
 
                     <img src={portrait} alt="" className='w-full h-[105vh] object-cover mt-[-5vh]' />
                     <img src={top} alt="" className='absolute top-[-10vh] left-0 object-cover' />
@@ -183,12 +185,12 @@ function Home() {
                 </div>
 
 
-                <div className='absolute z-10 bottom-[-4vh] left-0 w-full overflow-hidden whitespace-nowrap font-suisse'>
+                <div className='absolute z-10 bottom-[-5vh] left-0 w-full overflow-hidden whitespace-nowrap font-suisse'>
                     <div ref={marqueeRef} className='flex w-max'>
-                        <h1 className='text-[17.8vh] font-suisse font-medium pr-10 marquee-item text-transparent [-webkit-text-stroke:2px_#CFB88B] hover:text-[#CFB88B] transition-colors duration-300'>
+                        <h1 className='text-[10vw] font-suisse font-medium pr-10 marquee-item text-transparent [-webkit-text-stroke:2px_#CFB88B] hover:text-[#CFB88B] transition-colors duration-300'>
                             AI Trust & Safety Research Scientist &nbsp;&nbsp;&nbsp; Professor at DePaul University School of Computing &nbsp;&nbsp;&nbsp; Founder : AmendLabs x JaliaTechnologies &nbsp;&nbsp;&nbsp;
                         </h1>
-                        <h1 className='text-[17.8vh] font-suisse font-medium pr-10 marquee-item text-transparent [-webkit-text-stroke:2px_#CFB88B] hover:text-[#CFB88B] transition-colors duration-300'>
+                        <h1 className='text-[10vw] font-suisse font-medium pr-10 marquee-item text-transparent [-webkit-text-stroke:2px_#CFB88B] hover:text-[#CFB88B] transition-colors duration-300'>
                             AI Trust & Safety Research Scientist &nbsp;&nbsp;&nbsp; Professor at DePaul University School of Computing &nbsp;&nbsp;&nbsp; Founder : AmendLabs x JaliaTechnologies &nbsp;&nbsp;&nbsp;
                         </h1>
                     </div>
@@ -196,42 +198,19 @@ function Home() {
 
 
             </div>
-            <div className='w-full h-screen px-[5vw] flex items-center justify-center font-light bg-black'>
-                <div ref={textRevealRef} style={{ visibility: 'hidden' }}>
-                    <h1 className='text-[5.3vh]'>
-                        <span className='text-[2.6vh] font-bold pr-[9vw] text-[#dadada]'>I focus</span> on advancing responsible technology through interdisciplinary research at the intersection of AI governance, data ethics, and technology equity. As an Assistant Professor of Human-Computer Interaction at DePaul University, I lead the RAISE Lab to promote responsible AI and computing for the common good.
+            <div className='w-full h-fit px-[5vw] py-[20vh] flex items-center justify-center font-light bg-black'>
+                <div ref={textRevealRef} className='w-full' style={{ visibility: 'hidden' }}>
+                    <h1 className='text-[3.5vw] leading-normal text-[#a1a1a1]'>
+                        <span className='text-[1.7vw] font-bold pr-[9vw] text-[#ffffff]'>I focus</span> on advancing responsible technology through interdisciplinary research at the intersection of AI governance, data ethics, and technology equity. As an Assistant Professor of Human-Computer Interaction at DePaul University, I lead the RAISE Lab to promote responsible AI and computing for the common good.
                     </h1>
                 </div>
             </div>
             <div className='w-screen bg-black pb-[10vh]'>
-                <h1 className='text-[5vh] px-[5vw] mb-[10vh]'>Selected Work</h1>
-                <div className="w-full flex flex-col px-[10vw] items-end gap-[15vh]">
-                    {/* Work 1 */}
-                    <div className="w-[35vw] overflow-hidden group cursor-pointer relative">
-                        <img
-                            src={work1}
-                            alt="Selected Work 1"
-                            className="w-full h-auto object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105"
-                        />
-                    </div>
-
-                    {/* Work 2 */}
-                    <div className="w-[35vw] overflow-hidden group cursor-pointer relative">
-                        <img
-                            src={work2}
-                            alt="Selected Work 2"
-                            className="w-full h-auto object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105"
-                        />
-                    </div>
-
-                    {/* Work 3 */}
-                    <div className="w-[35vw] overflow-hidden group cursor-pointer relative">
-                        <img
-                            src={work3}
-                            alt="Selected Work 3"
-                            className="w-full h-auto object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105"
-                        />
-                    </div>
+                <h1 className='text-[3.125rem] px-[5vw] mb-[7vh]'>Selected Work</h1>
+                <div className="flex items-center justify-between px-[5vw] overflow-auto">
+                    <div className='border border-[#393939] rounded-xl overflow-hidden w-[60vw] '><img src={work1} alt="work 1" className="w-auto h-auto max-h-[73vh] m-7 border border-[#393939] rounded-xl object-contain" /></div>
+                    {/* <div className='border border-[#393939] rounded-xl overflow-hidden w-[50vw]'><img src={work2} alt="work 2" className="w-auto h-auto max-h-[73vh] object-contain" /></div>
+                    <div className='border border-[#393939] rounded-xl overflow-hidden w-[50vw]'><img src={work3} alt="work 3" className="w-auto h-auto max-h-[73vh] object-contain" /></div> */}
                 </div>
             </div>
         </div>

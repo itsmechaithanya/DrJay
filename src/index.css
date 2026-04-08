@@ -38,4 +38,13 @@
 @theme {
     --font-suisse: 'SuisseIntl', sans-serif;
     --font-gilroy: 'Gilroy', sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
+    --font-mr-de-haviland: 'Mr De Haviland', cursive;
+}
+
+@layer base {
+    img {
+        -webkit-user-drag: none;
+
+    }
 }
