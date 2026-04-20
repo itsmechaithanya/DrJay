@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
 
 function Navbar() {
     const [hidden, setHidden] = useState(false);
@@ -20,6 +21,34 @@ function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const handleLinkEnter = (e) => {
+        const el = e.currentTarget;
+        const top = el.querySelector('.link-text-top');
+        const bot = el.querySelector('.link-text-bot');
+        if (top && bot) {
+            gsap.to(top, { yPercent: -100, duration: 0.3, ease: 'power2.inOut' });
+            gsap.to(bot, { yPercent: -100, duration: 0.3, ease: 'power2.inOut' });
+        }
+    };
+    const handleLinkLeave = (e) => {
+        const el = e.currentTarget;
+        const top = el.querySelector('.link-text-top');
+        const bot = el.querySelector('.link-text-bot');
+        if (top && bot) {
+            gsap.to(top, { yPercent: 0, duration: 0.3, ease: 'power2.inOut' });
+            gsap.to(bot, { yPercent: 0, duration: 0.3, ease: 'power2.inOut' });
+        }
+    };
+
+    const SlideLink = ({ to, children, className = '' }) => (
+        <Link to={to} className={`overflow-hidden relative inline-block ${className}`} onMouseEnter={handleLinkEnter} onMouseLeave={handleLinkLeave}>
+            <span className='relative overflow-hidden inline-flex flex-col' style={{ height: '1.2em' }}>
+                <span className='link-text-top'>{children}</span>
+                <span className='link-text-bot'>{children}</span>
+            </span>
+        </Link>
+    );
+
     return (
         <>
             {/* Background Gradient Overlay - always visible */}
@@ -27,15 +56,18 @@ function Navbar() {
 
             <nav className={`fixed top-0 left-0 w-screen flex justify-between items-center px-[5vw] py-[4vh] z-50 text-white transition-transform duration-500 ease-in-out ${hidden ? '-translate-y-full' : 'translate-y-0'}`}>
                 <div className="text-[1.1rem] font-bold">
-                    <Link to="/">Jay Ph.D</Link>
+                    <SlideLink to="/">Jay Ph.D</SlideLink>
                 </div>
                 <div className="flex items-center gap-9 text-[1rem] font-medium text-[#8f8f8f]">
-                    <Link to="/work" className="hover:text-white transition-colors duration-300">Work</Link>
-                    <Link to="/about" className="hover:text-white transition-colors duration-300">About</Link>
-                    <Link to="/publications" className="hover:text-white transition-colors duration-300">Publications</Link>
-                    <Link to="/raise-lab" className="hover:text-white transition-colors duration-300">RAISE Lab</Link>
-                    <Link to="/contact" className="bg-gray-200 text-black px-[3vh] py-[1.2vh] rounded-[3vh] font-semibold hover:bg-white transition-colors ml-[1vh]">
-                        Contact
+                    <SlideLink to="/work" className="hover:text-white transition-colors duration-300">Work</SlideLink>
+                    <SlideLink to="/about" className="hover:text-white transition-colors duration-300">About</SlideLink>
+                    <SlideLink to="/publications" className="hover:text-white transition-colors duration-300">Publications</SlideLink>
+                    <SlideLink to="/raise-lab" className="hover:text-white transition-colors duration-300">RAISE Lab</SlideLink>
+                    <Link to="/contact" className="bg-gray-200 text-black px-[3vh] py-[1.2vh] rounded-[3vh] hover:bg-white transition-colors ml-[1vh] overflow-hidden relative" onMouseEnter={handleLinkEnter} onMouseLeave={handleLinkLeave}>
+                        <span className='relative overflow-hidden inline-flex flex-col' style={{ height: '1.2em' }}>
+                            <span className='link-text-top'>Contact</span>
+                            <span className='link-text-bot'>Contact</span>
+                        </span>
                     </Link>
                 </div>
             </nav>

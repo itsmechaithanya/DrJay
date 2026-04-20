@@ -61,7 +61,7 @@ const Loader = ({ onComplete }) => {
         display: 'flex',
         alignItems: 'flex-end',
         justifyContent: 'flex-end',
-        padding: '5vw',
+        paddingRight: '2vw',
       }}
     >
       <h1
