@@ -286,7 +286,7 @@ function Home() {
     }, []);
 
     return (
-        <div className='bg-black'>
+        <div className='bg-black w-screen overflow-hidden'>
             <div className="w-screen h-screen  overflow-hidden text-white relative">
                 <div className="w-full h-full relative">
                     <div className='absolute z-10 top-[30vh] left-[3vw] w-full h-[22vw]'>
