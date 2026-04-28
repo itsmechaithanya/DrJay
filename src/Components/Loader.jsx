@@ -19,6 +19,9 @@ const Loader = ({ onComplete }) => {
           ease: 'power3.inOut',
           onComplete: () => {
             document.body.style.overflow = '';
+            window.loaderHasCompleted = true;
+            sessionStorage.setItem('loaderHasCompleted', 'true');
+            window.dispatchEvent(new Event('loaderComplete'));
             if (onComplete) onComplete();
           },
         });

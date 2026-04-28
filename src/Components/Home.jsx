@@ -17,6 +17,7 @@ function Home() {
     const textRevealRef = useRef(null);
     const work2VideoRef = useRef(null);
     const boldIdeasRef = useRef(null);
+    const portraitRef = useRef(null);
 
     const handleBtnEnter = (e) => {
         const btn = e.currentTarget;
@@ -45,6 +46,28 @@ function Home() {
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 
+        const heroTitles = gsap.utils.toArray('.hero-title');
+
+        let handleLoaderComplete;
+        if (portraitRef.current) {
+            if (!window.loaderHasCompleted) {
+                gsap.set(portraitRef.current, { opacity: 0 });
+                gsap.set(heroTitles, { yPercent: 100 });
+                if (marqueeRef.current) gsap.set(marqueeRef.current, { yPercent: 100 });
+
+                handleLoaderComplete = () => {
+                    gsap.to(portraitRef.current, { opacity: 1, duration: 0.75, ease: 'power2.inOut' });
+                    gsap.to(heroTitles, { yPercent: 0, duration: 1, stagger: 0.15, ease: 'power3.out', delay: 0.2 });
+                    if (marqueeRef.current) gsap.to(marqueeRef.current, { yPercent: 0, duration: 1, ease: 'power3.out', delay: 0.4 });
+                };
+                window.addEventListener('loaderComplete', handleLoaderComplete);
+            } else {
+                gsap.fromTo(portraitRef.current, { opacity: 0 }, { opacity: 1, duration: 0.75, delay: 0.5, ease: 'power2.inOut' });
+                gsap.fromTo(heroTitles, { yPercent: 100 }, { yPercent: 0, duration: 1, stagger: 0.15, delay: 0.5, ease: 'power3.out' });
+                if (marqueeRef.current) gsap.fromTo(marqueeRef.current, { yPercent: 100 }, { yPercent: 0, duration: 1, delay: 0.7, ease: 'power3.out' });
+            }
+        }
+
         const items = gsap.utils.toArray('.marquee-item');
 
         if (textRevealRef.current) {
@@ -68,17 +91,21 @@ function Home() {
                         toggleActions: "play none none reverse",
                         onEnter: (self) => {
                             // If scrolling very fast into the section, speed up the reveal so there's no waiting
-                            if (Math.abs(self.getVelocity()) > 1000) {
-                                revealAnim.timeScale(4);
-                            } else {
-                                revealAnim.timeScale(1);
+                            if (self.animation) {
+                                if (Math.abs(self.getVelocity()) > 1000) {
+                                    self.animation.timeScale(4);
+                                } else {
+                                    self.animation.timeScale(1);
+                                }
                             }
                         },
                         onEnterBack: (self) => {
-                            if (Math.abs(self.getVelocity()) > 1000) {
-                                revealAnim.timeScale(4);
-                            } else {
-                                revealAnim.timeScale(1);
+                            if (self.animation) {
+                                if (Math.abs(self.getVelocity()) > 1000) {
+                                    self.animation.timeScale(4);
+                                } else {
+                                    self.animation.timeScale(1);
+                                }
                             }
                         }
                     }
@@ -282,6 +309,9 @@ function Home() {
             gsap.ticker.remove(tick);
             clearTimeout(scrollTimeout);
             ScrollTrigger.getAll().forEach(t => t.kill());
+            if (handleLoaderComplete) {
+                window.removeEventListener('loaderComplete', handleLoaderComplete);
+            }
         };
     }, []);
 
@@ -289,16 +319,25 @@ function Home() {
         <div className='bg-black w-screen overflow-hidden'>
             <div className="w-screen h-screen  overflow-hidden text-white relative">
                 <div className="w-full h-full relative">
-                    <div className='absolute z-10 top-[30vh] left-[3vw] w-full h-[22vw]'>
-                        <h1 className='absolute text-[2vw] top-[2.5vw] left-[2.5vw] text-[#7b7b7b]'>This is</h1>
-                        <h1 className='absolute text-[10vw] top-[5vw] left-[2vw] leading-none whitespace-nowrap font-bold'><span className='text-[#ededed]'>Dr.</span>Jay</h1>
-                        <h1 className='absolute text-[3.5vw] top-[12.5vw] left-[2.5vw] text-[#ededed] font-light'>Cunningham</h1>
+                    <div className='absolute z-10 top-[33vh] left-[3vw] w-full h-80'>
+                        <div className='absolute top-9 left-[2.5vw] overflow-hidden'>
+                            <h1 className='text-[1.9rem] text-[#a0a0a0] hero-title pb-2'>This is</h1>
+                        </div>
+                        <div className='absolute top-18 left-[2vw] overflow-hidden'>
+                            <h1 className='text-[10.5rem] leading-none whitespace-nowrap font-bold hero-title pb-4'><span className='text-[#ededed]'>Dr.</span>Jay</h1>
+                        </div>
+                        <div className='absolute top-49 left-[2.5vw] overflow-hidden'>
+                            <h1 className='text-[4rem] text-[#ededed] font-light hero-title pb-2'>Cunningham</h1>
+                        </div>
                     </div>
-
-                    <h1 className='absolute z-10 text-[1.3vw] top-1/2 -translate-y-1/2 right-[4vw] text-right leading-[2vw] text-[#ededed]'>Based in <br /> Chicago, IL</h1>
+                    {/* <h1 className='absolute z-10 text-[1.45rem] top-[63vh] left-[6vw] w-[vw] text-[#a0a0a0] font-medium'>AI Trust & Research Scientist</h1> */}
+                    <div className='absolute z-10 top-1/2 -translate-y-1/2 right-[4vw] overflow-hidden'>
+                        <h1 className='text-[1.3rem] text-right text-[#a9a9a9] hero-title pb-2'>AI Trust and <br /> Research Scientist</h1>
+                    </div>
+                    {/* <h1 className='absolute z-10 text-[1.3rem] bottom-[15vh] right-[2vw] text-right  text-[#a9a9a9]'>AI Trust and <br /> Research Scientist</h1> */}
 
                     <div className='relative w-full'>
-                        <img src={portrait} alt="" className='w-full h-[105vh] object-cover mt-[-5vh]' />
+                        <img ref={portraitRef} src={portrait} alt="" className='w-full h-[105vh] object-cover mt-[-6vh]' style={{ opacity: 0 }} />
                         <div className='absolute bottom-0 left-0 w-full h-[30vh] bg-linear-to-b from-transparent to-black pointer-events-none'></div>
                     </div>
                 </div>
@@ -315,7 +354,7 @@ function Home() {
             </div>
             <div className='w-full h-fit px-[5vw] py-[20vh] flex items-center justify-center font-light'>
                 <div ref={textRevealRef} className='w-full' style={{ visibility: 'hidden' }}>
-                    <h1 className='text-[3.5rem] leading-normal text-[#a1a1a1]'>
+                    <h1 className='text-[3.9rem] leading-normal text-[#a1a1a1]'>
                         <span className='text-[1.7rem] font-bold pr-[9vw] text-[#ffffff]'>I focus</span> on advancing responsible technology through interdisciplinary research at the intersection of AI governance, data ethics, and technology equity. As an Assistant Professor of Human-Computer Interaction at DePaul University, I lead the RAISE Lab to promote responsible AI and computing for the common good.
                     </h1>
                 </div>
