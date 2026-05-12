@@ -1,10 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import gsap from 'gsap';
+import { motion, AnimatePresence } from 'framer-motion';
 
 function Navbar() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const lastScrollY = useRef(0);
     const navRef = useRef(null);
+    const location = useLocation();
+
+    // Close menu when route changes
+    useEffect(() => {
+        setIsMenuOpen(false);
+    }, [location]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -90,10 +98,12 @@ function Navbar() {
             <div className="fixed top-0 left-0 w-full h-[20vh] pointer-events-none z-40" style={{ background: 'linear-gradient(to bottom, black, transparent)' }} />
 
             <nav ref={navRef} className="fixed top-0 left-0 w-screen flex justify-between items-center px-[5vw] py-[4vh] z-50 text-white">
-                <div className="nav-item text-[1.1rem] font-bold">
-                    <SlideLink to="/">Jay Ph.D</SlideLink>
+                <div className="nav-item text-[1.1rem] font-bold relative z-[70]">
+                    <SlideLink className="text-white" to="/">Jay Ph.D</SlideLink>
                 </div>
-                <div className="flex items-center gap-9 text-[0.9rem] font-medium text-[#8f8f8f]">
+                
+                {/* Desktop Links */}
+                <div className="hidden md:flex items-center gap-9 text-[0.9rem] font-medium text-[#8f8f8f]">
                     <SlideLink to="/work" className="nav-item hover:text-white transition-colors duration-300">Work</SlideLink>
                     <SlideLink to="/about" className="nav-item hover:text-white transition-colors duration-300">About</SlideLink>
                     <SlideLink to="/publications" className="nav-item hover:text-white transition-colors duration-300">Publications</SlideLink>
@@ -106,7 +116,39 @@ function Navbar() {
                         </span>
                     </Link>
                 </div>
+
+                {/* Mobile Menu Indicator (2 Lines) */}
+                <button 
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    className="md:hidden flex flex-col justify-center items-center w-8 h-8 relative z-[70] focus:outline-none"
+                    aria-label="Toggle Menu"
+                >
+                    <span className={`block w-8 h-[2px] bg-white transition-transform duration-300 ease-in-out ${isMenuOpen ? 'rotate-45 translate-y-[1px]' : '-translate-y-1'}`}></span>
+                    <span className={`block w-8 h-[2px] bg-white transition-transform duration-300 ease-in-out ${isMenuOpen ? '-rotate-45 -translate-y-[1px]' : 'translate-y-1'}`}></span>
+                </button>
             </nav>
+
+            {/* Mobile Full Screen Menu Overlay */}
+            <AnimatePresence>
+                {isMenuOpen && (
+                    <motion.div 
+                        initial={{ opacity: 0, y: '-100%' }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: '-100%' }}
+                        transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
+                        className="fixed inset-0 w-screen h-screen bg-[#0a0a0a] z-[60] flex flex-col justify-center items-center px-[5vw]"
+                    >
+                        <div className="flex flex-col items-center gap-8 text-[3rem] font-medium text-white tracking-tight">
+                            <Link to="/work" onClick={() => setIsMenuOpen(false)} className="hover:text-[#CFB88B] transition-colors">Work</Link>
+                            <Link to="/about" onClick={() => setIsMenuOpen(false)} className="hover:text-[#CFB88B] transition-colors">About</Link>
+                            <Link to="/publications" onClick={() => setIsMenuOpen(false)} className="hover:text-[#CFB88B] transition-colors">Publications</Link>
+                            <Link to="/speaking" onClick={() => setIsMenuOpen(false)} className="hover:text-[#CFB88B] transition-colors">Speaking</Link>
+                            <a href="https://raiselab.framer.website" target="_blank" rel="noopener noreferrer" className="hover:text-[#CFB88B] transition-colors">RAISE Lab</a>
+                            <Link to="/contact" onClick={() => setIsMenuOpen(false)} className="hover:text-[#CFB88B] transition-colors text-[#CFB88B] mt-4">Contact</Link>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </>
     );
 }

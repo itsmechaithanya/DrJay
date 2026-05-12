@@ -5,6 +5,9 @@ import SplitType from 'split-type';
 import work1 from '../assets/work1.png';
 import work2 from '../assets/workj2.png';
 import work3 from '../assets/work3.jpg';
+import pub1 from '../assets/pub1.png';
+import pub2 from '../assets/pub2.png';
+import pub3 from '../assets/pub3.png';
 
 function Publications() {
     const [activeFilter, setActiveFilter] = useState('Show all');
@@ -103,15 +106,21 @@ function Publications() {
         };
     }, [activeFilter]);
 
-    const filters = ['Show all', 'AI & Ethics', 'HCI', 'Health Tech', 'FinTech', 'Social Media'];
+    const filters = ['Show all', 'AI & Ethics', 'HCI', 'Health Tech', 'FinTech', 'Education'];
 
     const publications = [
-        { id: 1, title: 'Why is the solution the end point to a problem?', category: 'AI & Ethics', image: work1 },
-        { id: 2, title: 'Can FinTech Truly Deliver Financial Inclusion?', category: 'FinTech', image: work2 },
-        { id: 3, title: 'Intergenerational design collaborations', category: 'Health Tech', image: work3 },
-        { id: 4, title: 'Data Ethics in Modern Computing', category: 'AI & Ethics', image: work1 },
-        { id: 5, title: 'Addressing Bias in Machine Learning', category: 'HCI', image: work2 },
-        { id: 6, title: 'Social Media Algorithms and Trust', category: 'Social Media', image: work3 },
+        { id: 4, title: 'The cost of culture: An analysis of cash app and the financial inclusion of black american communities', category: 'FinTech', image: work1 },
+        { id: 5, title: 'Collaboratively mitigating racial disparities in automated speech recognition and language technologies with african american english speakers', category: 'AI & Ethics', image: work2 },
+        { id: 6, title: 'Should AI mimic people? Understanding AI-supported writing technology among black users', category: 'AI & Ethics', image: work3 },
+        { id: 7, title: 'Towards Equitable Community-Industry Collaborations: Understanding the Experiences of Nonprofits\' Collaborations with Tech Companies', category: 'HCI', image: work1 },
+        { id: 8, title: 'Toward Responsible ASR for African American English Speakers: A Scoping Review of Bias and Equity in Speech Technology', category: 'AI & Ethics', image: work2 },
+        { id: 9, title: 'Scalable community mentorship: A vision for engineering literacy & access', category: 'Education', image: work3 },
+        { id: 10, title: 'AVELA--A Vision for Engineering Literacy & Access: Understanding Why Technology Alone Is Not Enough', category: 'Education', image: work1 },
+        { id: 11, title: 'Society and inclusive technology design pedagogy: a digital zine', category: 'Education', image: work2 },
+        { id: 12, title: 'Methods of Designing Justice-oriented Interactive AI Systems', category: 'AI & Ethics', image: work3 },
+        { id: 13, title: 'Beyond Participation: Building a Black Community Advisory Board for Computing Research Collaborations', category: 'HCI', image: work1 },
+        { id: 14, title: 'Advancing NLP Data Equity: Practitioner Responsibility and Accountability in NLP Data Practices', category: 'AI & Ethics', image: work2 },
+        { id: 15, title: 'Society and inclusive technology design pedagogy', category: 'Education', image: work3 },
     ];
 
     return (
@@ -135,8 +144,8 @@ function Publications() {
                         key={filter}
                         onClick={() => setActiveFilter(filter)}
                         className={`px-6 py-2.5 rounded-4xl text-[0.95rem] font-medium transition-all duration-300 ${activeFilter === filter
-                                ? 'bg-white text-black'
-                                : 'bg-[#1c1c1c] text-[#a0a0a0]'
+                            ? 'bg-white text-black'
+                            : 'bg-[#1c1c1c] text-[#a0a0a0]'
                             }`}
                     >
                         {filter}

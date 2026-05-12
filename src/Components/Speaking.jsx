@@ -111,20 +111,7 @@ function Speaking() {
             </div>
 
             <div className="w-full h-px bg-[#333] mb-[10vh]"></div>
-
-            <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16 pb-[15vh]">
-                <div className="talk-card flex flex-col">
-                    <div className="text-[#a0a0a0] text-sm mb-3 uppercase tracking-wider">Upcoming Keynote</div>
-                    <h3 className="text-[2rem] font-medium leading-[1.3] mb-4">The Future of AI Trust</h3>
-                    <p className="text-lg text-[#8f8f8f]">San Francisco, CA • October 2026</p>
-                </div>
-                <div className="talk-card flex flex-col">
-                    <div className="text-[#a0a0a0] text-sm mb-3 uppercase tracking-wider">Recent Talk</div>
-                    <h3 className="text-[2rem] font-medium leading-[1.3] mb-4">Designing for Generative AI</h3>
-                    <p className="text-lg text-[#8f8f8f]">London, UK • March 2026</p>
-                </div>
-            </div>
-        </div>
+         </div>
     );
 }
 
