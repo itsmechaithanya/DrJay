@@ -104,7 +104,7 @@ function Speaking() {
 
             <div className="flex flex-col md:flex-row items-start w-full mb-[12vh]">
                 <div className="w-full pt-3" ref={textRevealRef} style={{ visibility: 'hidden' }}>
-                    <p className="text-[3.9rem] leading-normal text-[#a1a1a1] font-light">
+                    <p className="text-[3rem] leading-normal text-[#a1a1a1] font-light">
                         <span className='text-[1.7rem] font-bold pr-[9vw] text-[#ffffff]'>Talks</span>A trusted voice in responsible AI and public-interest technology, working across consulting, advisory, speaking, and collaborations in AI, policy, and emerging tech.
                     </p>
                 </div>

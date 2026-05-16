@@ -109,18 +109,18 @@ function Publications() {
     const filters = ['Show all', 'AI & Ethics', 'HCI', 'Health Tech', 'FinTech', 'Education'];
 
     const publications = [
-        { id: 4, title: 'The cost of culture: An analysis of cash app and the financial inclusion of black american communities', category: 'FinTech', image: work1 },
-        { id: 5, title: 'Collaboratively mitigating racial disparities in automated speech recognition and language technologies with african american english speakers', category: 'AI & Ethics', image: work2 },
-        { id: 6, title: 'Should AI mimic people? Understanding AI-supported writing technology among black users', category: 'AI & Ethics', image: work3 },
-        { id: 7, title: 'Towards Equitable Community-Industry Collaborations: Understanding the Experiences of Nonprofits\' Collaborations with Tech Companies', category: 'HCI', image: work1 },
-        { id: 8, title: 'Toward Responsible ASR for African American English Speakers: A Scoping Review of Bias and Equity in Speech Technology', category: 'AI & Ethics', image: work2 },
-        { id: 9, title: 'Scalable community mentorship: A vision for engineering literacy & access', category: 'Education', image: work3 },
-        { id: 10, title: 'AVELA--A Vision for Engineering Literacy & Access: Understanding Why Technology Alone Is Not Enough', category: 'Education', image: work1 },
-        { id: 11, title: 'Society and inclusive technology design pedagogy: a digital zine', category: 'Education', image: work2 },
-        { id: 12, title: 'Methods of Designing Justice-oriented Interactive AI Systems', category: 'AI & Ethics', image: work3 },
-        { id: 13, title: 'Beyond Participation: Building a Black Community Advisory Board for Computing Research Collaborations', category: 'HCI', image: work1 },
-        { id: 14, title: 'Advancing NLP Data Equity: Practitioner Responsibility and Accountability in NLP Data Practices', category: 'AI & Ethics', image: work2 },
-        { id: 15, title: 'Society and inclusive technology design pedagogy', category: 'Education', image: work3 },
+        { id: 1, title: 'Why does HCI view techno-solution as the end point to a social problem?', category: 'HCI', image: work1, link: 'https://dl.acm.org/doi/pdf/10.1145/3557890' },
+        { id: 2, title: 'The cost of using culture to market financial access in Black communities.', category: 'FinTech', image: work2, link: 'https://dl.acm.org/doi/epdf/10.1145/3532106.3533569' },
+        { id: 3, title: 'Examining and Reflecting on Collaboration with Aging Communities', category: 'HCI', image: work3, link: 'https://dl.acm.org/doi/pdf/10.1145/3479506?casa_token=dNTL9KMJ5WMAAAAA:PackdiWQI7XTxMkcgKlGi7V_EJaFTQ3YCP3U4k3fDCGvs3uf7O7RsELy_0XLwCOT8swlkK2fvJGElw' },
+        { id: 4, title: 'Towards Equitable Community-Industry Collaborations: Understanding the Experiences of Nonprofits\' Collaborations with Tech Companies', category: 'HCI', image: work1, link: '#' },
+        { id: 5, title: 'Toward Responsible ASR for African American English Speakers: A Scoping Review of Bias and Equity in Speech Technology', category: 'AI & Ethics', image: work2, link: '#' },
+        { id: 6, title: 'Scalable community mentorship: A vision for engineering literacy & access', category: 'Education', image: work3, link: '#' },
+        { id: 7, title: 'AVELA--A Vision for Engineering Literacy & Access: Understanding Why Technology Alone Is Not Enough', category: 'Education', image: work1, link: '#' },
+        { id: 8, title: 'Society and inclusive technology design pedagogy: a digital zine', category: 'Education', image: work2, link: '#' },
+        { id: 9, title: 'Methods of Designing Justice-oriented Interactive AI Systems', category: 'AI & Ethics', image: work3, link: '#' },
+        { id: 10, title: 'Beyond Participation: Building a Black Community Advisory Board for Computing Research Collaborations', category: 'HCI', image: work1, link: '#' },
+        { id: 11, title: 'Advancing NLP Data Equity: Practitioner Responsibility and Accountability in NLP Data Practices', category: 'AI & Ethics', image: work2, link: '#' },
+        { id: 12, title: 'Society and inclusive technology design pedagogy', category: 'Education', image: work3, link: '#' },
     ];
 
     return (
@@ -133,7 +133,7 @@ function Publications() {
 
             <div className="flex flex-col md:flex-row items-start w-full mb-[12vh]">
                 <div className="w-full pt-3" ref={textRevealRef} style={{ visibility: 'hidden' }}>
-                    <p className="text-[3.9rem] text-[#a1a1a1] font-light">
+                    <p className="text-[3rem] text-[#a1a1a1] font-light">
                         <span className='text-[1.7rem] font-bold pr-[9vw] text-[#ffffff]'>Overview</span>Research, design, engineering, strategy, and policy define my work spanning projects, publications, and ideas focused on innovation, critical thinking, and meaningful impact.
                     </p>
                 </div>
@@ -165,10 +165,10 @@ function Publications() {
 
             <div className="w-full h-px bg-[#333] mb-[10vh]"></div>
 
-            <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 pb-[15vh]">
+            <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-14 gap-y-18 pb-[15vh]">
                 {publications.filter(pub => activeFilter === 'Show all' || pub.category === activeFilter).map(pub => (
-                    <div key={pub.id} className="pub-card cursor-pointer flex flex-col">
-                        <div className="cursor-read w-full aspect-3/5 rounded-2xl overflow-hidden mb-6 bg-[#111]">
+                    <a key={pub.id} href={pub.link} target="_blank" rel="noopener noreferrer" className="pub-card cursor-pointer flex flex-col">
+                        <div className="cursor-read w-full aspect-3/5 rounded-2xl overflow-hidden mb-6 bg-[#111] border border-[#333]">
                             <img
                                 src={pub.image}
                                 alt={pub.title}
@@ -179,7 +179,7 @@ function Publications() {
                             <p className="text-[#a0a0a0] text-sm mb-3 uppercase tracking-wider">{pub.category}</p>
                             <h3 className="text-[1.5rem] font-medium leading-[1.3]">{pub.title}</h3>
                         </div>
-                    </div>
+                    </a>
                 ))}
                 {publications.filter(pub => activeFilter === 'Show all' || pub.category === activeFilter).length === 0 && (
                     <div className="col-span-full py-[10vh] text-center text-[#a0a0a0] text-xl">

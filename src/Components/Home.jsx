@@ -369,7 +369,7 @@ function Home() {
             </div>
             <div className='w-full h-fit px-[5vw] py-[20vh] flex items-center justify-center font-light'>
                 <div ref={textRevealRef} className='w-full' style={{ visibility: 'hidden' }}>
-                    <h1 className='text-[3.9rem] leading-normal text-[#a1a1a1]'>
+                    <h1 className='text-[3.4rem] leading-normal text-[#a1a1a1]'>
                         <span className='text-[1.7rem] font-bold pr-[9vw] text-[#ffffff]'>I focus</span> on advancing responsible technology through interdisciplinary research at the intersection of AI governance, data ethics, and technology equity. As an Assistant Professor of Human-Computer Interaction at DePaul University, I lead the RAISE Lab to promote responsible AI and computing for the common good.
                     </h1>
                 </div>
