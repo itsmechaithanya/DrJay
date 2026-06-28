@@ -6,6 +6,9 @@ const CustomCursor = () => {
   const textRef = useRef(null);
 
   useEffect(() => {
+    const isMobile = window.matchMedia('(max-width: 768px)').matches || ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+    if (isMobile) return;
+
     const cursor = cursorRef.current;
     if (!cursor) return;
 
@@ -92,7 +95,7 @@ const CustomCursor = () => {
   return (
     <div
       ref={cursorRef}
-      className="flex items-center justify-center font-medium pointer-events-none z-9999 fixed top-0 left-0"
+      className="hidden md:flex items-center justify-center font-medium pointer-events-none z-9999 fixed top-0 left-0"
       style={{
         width: '50px',
         height: '50px',
