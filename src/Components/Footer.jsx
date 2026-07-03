@@ -88,7 +88,7 @@ function Footer() {
     };
 
     return (
-        <footer className="w-full bg-[#171717] text-white pt-[12vh] sm:pt-[10vh] px-[5vw] relative z-20 flex flex-col justify-between overflow-hidden min-h-0 md:min-h-[80vh]">
+        <footer className="w-full bg-[#171717] text-white pt-[22vh] sm:pt-[10vh] px-[5vw] relative z-20 flex flex-col justify-between overflow-hidden min-h-0 md:min-h-[80vh]">
 
             {/* Top Section */}
             <div className="flex flex-col lg:flex-row justify-between items-start w-full mt-[5vh]">
