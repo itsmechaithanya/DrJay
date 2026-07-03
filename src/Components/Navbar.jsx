@@ -247,7 +247,7 @@ function Navbar() {
                         initial="initial"
                         animate="animate"
                         exit="exit"
-                        className="fixed inset-0 w-screen h-screen bg-[#0d0d0d] z-[60] flex flex-col justify-center px-[8vw] text-white overflow-hidden"
+                        className="fixed inset-0 w-screen h-[100dvh] bg-black z-[60] flex flex-col justify-center px-[8vw] text-white overflow-hidden"
                     >
                         {/* Background radial gradient mesh */}
                         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/[0.02] via-transparent to-transparent pointer-events-none z-0" />

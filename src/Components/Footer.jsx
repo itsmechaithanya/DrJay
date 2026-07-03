@@ -100,23 +100,23 @@ function Footer() {
                         </div>
                         <p className="text-[0.9rem] uppercase tracking-[0.2em] text-[#a1a1a1] ml-4 font-medium">Say hello</p>
                     </div>
-                    <h2 className="text-[4rem] lg:text-[10vw] font-bold leading-[0.85] tracking-tighter">
+                    <h2 className="text-[12vw] sm:text-[4rem] lg:text-[10vw] font-bold leading-[0.85] tracking-tighter">
                         LET'S<br />CONNECT
                     </h2>
                 </div>
 
-                <div className="flex flex-col mt-16 lg:mt-0 lg:items-end">
-                    <p className="text-[#a1a1a1] text-[1.2rem] mb-10 max-w-[320px] lg:text-right font-light leading-relaxed">
+                <div className="flex flex-col mt-16 lg:mt-0 lg:items-end w-full sm:w-auto">
+                    <p className="text-[#a1a1a1] text-[1.1rem] sm:text-[1.2rem] mb-8 sm:mb-10 max-w-[320px] lg:text-right font-light leading-relaxed">
                         Open to new connections, collaborations, and speaking engagements.
                     </p>
 
                     <a
                         href="mailto:engage@jaylcunningham.com"
-                        className="group flex items-center gap-6 text-[1.2rem] lg:text-[2rem] font-light mb-6 relative cursor-pointer"
+                        className="group flex items-center justify-between sm:justify-start gap-4 sm:gap-6 text-[4.2vw] sm:text-[1.3rem] lg:text-[2rem] font-light mb-6 relative cursor-pointer w-full sm:w-auto"
                         onMouseEnter={handleLinkEnter}
                         onMouseLeave={handleLinkLeave}
                     >
-                        <span className="relative z-10 transition-colors duration-300 group-hover:text-white text-[#8f8f8f]">engage@jaylcunningham.com</span>
+                        <span className="relative z-10 transition-colors duration-300 group-hover:text-white text-[#8f8f8f] break-all sm:break-normal">engage@jaylcunningham.com</span>
                         <div className="relative w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] rounded-full border border-white/20 flex items-center justify-center overflow-hidden shrink-0">
                             <div className="bg-circle absolute inset-0 bg-white rounded-full opacity-0 scale-0 origin-center"></div>
                             <span className="arrow relative z-10 flex items-center justify-center">
@@ -129,11 +129,11 @@ function Footer() {
 
                     <a
                         href="mailto:info@jalia.tech"
-                        className="group flex items-center gap-6 text-[1.2rem] lg:text-[2rem] font-light relative cursor-pointer"
+                        className="group flex items-center justify-between sm:justify-start gap-4 sm:gap-6 text-[4.2vw] sm:text-[1.3rem] lg:text-[2rem] font-light relative cursor-pointer w-full sm:w-auto"
                         onMouseEnter={handleLinkEnter}
                         onMouseLeave={handleLinkLeave}
                     >
-                        <span className="relative z-10 transition-colors duration-300 group-hover:text-white text-[#8f8f8f]">info@jalia.tech</span>
+                        <span className="relative z-10 transition-colors duration-300 group-hover:text-white text-[#8f8f8f] break-all sm:break-normal">info@jalia.tech</span>
                         <div className="relative w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] rounded-full border border-white/20 flex items-center justify-center overflow-hidden shrink-0">
                             <div className="bg-circle absolute inset-0 bg-white rounded-full opacity-0 scale-0 origin-center"></div>
                             <span className="arrow relative z-10 flex items-center justify-center">
@@ -150,12 +150,12 @@ function Footer() {
             <div className="flex flex-col lg:flex-row justify-between w-full mt-[12vh] border-t border-white/10 pt-10 pb-[5vh] z-10">
                 <div className="flex flex-col gap-2 mb-10 lg:mb-0">
                     <h3 className="text-[#a1a1a1] text-[0.8rem] uppercase tracking-[0.15em] mb-3 font-medium">Local Time</h3>
-                    <p className="text-[1.2rem] font-light">Chicago, IL <span className="ml-3 font-medium text-[#CFB88B]">{time}</span></p>
+                    <p className="text-[1.1rem] sm:text-[1.2rem] font-light">Chicago, IL <span className="ml-3 font-medium text-[#CFB88B]">{time}</span></p>
                 </div>
 
                 <div className="flex flex-col gap-2 mb-10 lg:mb-0">
                     <h3 className="text-[#a1a1a1] text-[0.8rem] uppercase tracking-[0.15em] mb-3 font-medium">Socials</h3>
-                    <div className="flex flex-wrap gap-x-8 gap-y-3 text-[1.1rem] font-light">
+                    <div className="flex flex-wrap gap-x-6 sm:gap-x-8 gap-y-4 text-[1rem] sm:text-[1.1rem] font-light">
                         {SOCIAL_LINKS.map((social) => (
                             <a 
                                 key={social.name} 
@@ -174,8 +174,6 @@ function Footer() {
                         ))}
                     </div>
                 </div>
-
-
             </div>
 
             {/* Massive Bottom Text */}
