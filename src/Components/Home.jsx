@@ -339,22 +339,27 @@ function Home() {
         <div className='bg-black w-screen overflow-hidden'>
             <div className="w-screen h-screen  overflow-hidden text-white relative">
                 <div className="w-full h-full relative">
-                    <div className='absolute z-10 top-[15vh] md:top-[33vh] left-[6vw] md:left-[3vw] w-full h-80'>
-                        <div className='absolute top-0 md:top-9 left-[2.5vw] overflow-hidden'>
-                            <h1 className='md:text-[1.9rem] text-[1.2rem] text-[#dcdcdc] hero-title pb-2'>This is</h1>
+                    <div className='absolute z-10 top-[18vh] md:top-[36vh] left-[6vw] md:left-[3vw] w-full h-80'>
+                        <div className='absolute top-0 md:top-9 left-0 overflow-hidden'>
+                            <h1 className='md:text-[1.9rem] text-[1.5rem] text-[#ededed] hero-title pb-2'>This is</h1>
                         </div>
-                        <div className='absolute top-8 md:top-18 left-0 md:left-[2vw] overflow-hidden'>
+                        <div className='absolute top-8 md:top-18 left-0 overflow-hidden'>
                             <h1 className='text-[25vw] md:text-[9rem] leading-none whitespace-nowrap font-bold hero-title pb-4'><span className='text-[#ededed]'>Dr.</span>Jay</h1>
                         </div>
-                        <div className='absolute top-[calc(2rem+23vw)] md:top-47 left-[0.5vw] md:left-[2.5vw] overflow-hidden'>
+                        <div className='absolute top-[calc(2rem+21vw)] md:top-47 left-0 overflow-hidden'>
                             <h1 className='text-[9vw] md:text-[3.3rem] text-[#ededed] font-light hero-title pb-2'>Cunningham</h1>
                         </div>
                     </div>
-                    {/* <h1 className='absolute z-10 text-[1.45rem] top-[63vh] left-[6vw] w-[vw] text-[#a0a0a0] font-medium'>AI Trust & Research Scientist</h1> */}
-                    <div className='absolute z-10 top-[48vh] md:top-1/2 md:-translate-y-1/2 left-[7vw] md:left-auto md:right-[4vw] overflow-hidden'>
-                        <h1 className='text-[1.2rem] md:text-[1.3rem] text-left md:text-right text-[#a9a9a9] hero-title pb-2'>
-                            <span className="hidden md:inline">AI Trust and <br /> Research Scientist</span>
-                            <span className="md:hidden leading-relaxed">AI Trust and <br /> Research <br /> Scientist</span>
+                    {/* Mobile-only title just above the marquee */}
+                    <div className='absolute z-10 bottom-[22vw] left-[6vw] overflow-hidden md:hidden'>
+                        <h1 className='text-[5vw] text-left text-[#d4d4d4] hero-title pb-2'>
+                            AI Trust and <br /> Research Scientist
+                        </h1>
+                    </div>
+                    {/* Desktop-only title on the right */}
+                    <div className='absolute z-10 hidden md:block md:top-1/2 md:-translate-y-1/2 md:right-[4vw] overflow-hidden'>
+                        <h1 className='text-[1.3rem] text-right text-[#a9a9a9] hero-title pb-2 whitespace-nowrap'>
+                            AI Trust and <br /> Research Scientist
                         </h1>
                     </div>
                     {/* <h1 className='absolute z-10 text-[1.3rem] bottom-[15vh] right-[2vw] text-right  text-[#a9a9a9]'>AI Trust and <br /> Research Scientist</h1> */}

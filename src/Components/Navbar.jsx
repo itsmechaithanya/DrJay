@@ -264,56 +264,50 @@ function Navbar() {
                         </button>
 
                         {/* Navigation Links */}
-                        <div className="flex flex-col gap-6 relative z-10">
+                        <div className="flex flex-col gap-6 relative z-10 mt-[20vh] pl-[5vw]">
                             <div className="overflow-hidden">
-                                <motion.div variants={menuItemVariants} className="flex items-baseline gap-4">
-                                    <span className="text-xs font-mono text-[#CFB88B] tracking-widest opacity-60">01 /</span>
-                                    <Link to="/work" onClick={() => setIsMenuOpen(false)} className="text-[2.5rem] sm:text-[3rem] font-bold tracking-tight hover:text-[#CFB88B] transition-colors duration-300">
+                                <motion.div variants={menuItemVariants}>
+                                    <Link to="/work" onClick={() => setIsMenuOpen(false)} className="text-[3rem] sm:text-[3.5rem] font-medium tracking-tight hover:text-[#CFB88B] transition-colors duration-300 block">
                                         Work
                                     </Link>
                                 </motion.div>
                             </div>
 
                             <div className="overflow-hidden">
-                                <motion.div variants={menuItemVariants} className="flex items-baseline gap-4">
-                                    <span className="text-xs font-mono text-[#CFB88B] tracking-widest opacity-60">02 /</span>
-                                    <Link to="/about" onClick={() => setIsMenuOpen(false)} className="text-[2.5rem] sm:text-[3rem] font-bold tracking-tight hover:text-[#CFB88B] transition-colors duration-300">
+                                <motion.div variants={menuItemVariants}>
+                                    <Link to="/about" onClick={() => setIsMenuOpen(false)} className="text-[3rem] sm:text-[3.5rem] font-medium tracking-tight hover:text-[#CFB88B] transition-colors duration-300 block">
                                         About
                                     </Link>
                                 </motion.div>
                             </div>
 
                             <div className="overflow-hidden">
-                                <motion.div variants={menuItemVariants} className="flex items-baseline gap-4">
-                                    <span className="text-xs font-mono text-[#CFB88B] tracking-widest opacity-60">03 /</span>
-                                    <Link to="/publications" onClick={() => setIsMenuOpen(false)} className="text-[2.5rem] sm:text-[3rem] font-bold tracking-tight hover:text-[#CFB88B] transition-colors duration-300">
+                                <motion.div variants={menuItemVariants}>
+                                    <Link to="/publications" onClick={() => setIsMenuOpen(false)} className="text-[3rem] sm:text-[3.5rem] font-medium tracking-tight hover:text-[#CFB88B] transition-colors duration-300 block">
                                         Publications
                                     </Link>
                                 </motion.div>
                             </div>
 
                             <div className="overflow-hidden">
-                                <motion.div variants={menuItemVariants} className="flex items-baseline gap-4">
-                                    <span className="text-xs font-mono text-[#CFB88B] tracking-widest opacity-60">04 /</span>
-                                    <Link to="/speaking" onClick={() => setIsMenuOpen(false)} className="text-[2.5rem] sm:text-[3rem] font-bold tracking-tight hover:text-[#CFB88B] transition-colors duration-300">
+                                <motion.div variants={menuItemVariants}>
+                                    <Link to="/speaking" onClick={() => setIsMenuOpen(false)} className="text-[3rem] sm:text-[3.5rem] font-medium tracking-tight hover:text-[#CFB88B] transition-colors duration-300 block">
                                         Speaking
                                     </Link>
                                 </motion.div>
                             </div>
 
                             <div className="overflow-hidden">
-                                <motion.div variants={menuItemVariants} className="flex items-baseline gap-4">
-                                    <span className="text-xs font-mono text-[#CFB88B] tracking-widest opacity-60">05 /</span>
-                                    <a href="https://raiselab.framer.website" target="_blank" rel="noopener noreferrer" className="text-[2.5rem] sm:text-[3rem] font-bold tracking-tight hover:text-[#CFB88B] transition-colors duration-300 flex items-center gap-2">
-                                        RAISE Lab <svg className="w-5 h-5 text-[#CFB88B]" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
+                                <motion.div variants={menuItemVariants}>
+                                    <a href="https://raiselab.framer.website" target="_blank" rel="noopener noreferrer" className="text-[3rem] sm:text-[3.5rem] font-medium tracking-tight hover:text-[#CFB88B] transition-colors duration-300 flex items-center gap-2">
+                                        RAISE Lab <svg className="w-6 h-6 text-[#CFB88B]" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
                                     </a>
                                 </motion.div>
                             </div>
 
                             <div className="overflow-hidden">
-                                <motion.div variants={menuItemVariants} className="flex items-baseline gap-4">
-                                    <span className="text-xs font-mono text-[#CFB88B] tracking-widest opacity-60">06 /</span>
-                                    <Link to="/contact" onClick={() => setIsMenuOpen(false)} className="text-[2.5rem] sm:text-[3rem] font-bold tracking-tight text-[#CFB88B] hover:text-white transition-colors duration-300">
+                                <motion.div variants={menuItemVariants}>
+                                    <Link to="/contact" onClick={() => setIsMenuOpen(false)} className="text-[3rem] sm:text-[3.5rem] font-medium tracking-tight text-[#CFB88B] hover:text-white transition-colors duration-300 block">
                                         Contact
                                     </Link>
                                 </motion.div>
