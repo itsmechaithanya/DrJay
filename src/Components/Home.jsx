@@ -339,7 +339,7 @@ function Home() {
         <div className='bg-black w-screen overflow-hidden'>
             <div className="w-screen h-screen  overflow-hidden text-white relative">
                 <div className="w-full h-full relative">
-                    <div className='absolute z-10 top-[18vh] md:top-[36vh] left-[6vw] md:left-[3vw] w-full h-80'>
+                    <div className='absolute z-10 top-[14vh] md:top-[30vh] left-[6vw] md:left-[3vw] w-full h-80'>
                         <div className='absolute top-0 md:top-9 left-0 overflow-hidden'>
                             <h1 className='md:text-[1.9rem] text-[1.5rem] text-[#ededed] hero-title pb-2'>This is</h1>
                         </div>
