@@ -88,7 +88,7 @@ function Footer() {
     };
 
     return (
-        <footer className="w-full bg-[#171717] text-white pt-[10vh] px-[5vw] relative z-20 flex flex-col justify-between overflow-hidden" style={{ minHeight: '80vh' }}>
+        <footer className="w-full bg-[#171717] text-white pt-[12vh] sm:pt-[10vh] px-[5vw] relative z-20 flex flex-col justify-between overflow-hidden min-h-0 md:min-h-[80vh]">
 
             {/* Top Section */}
             <div className="flex flex-col lg:flex-row justify-between items-start w-full mt-[5vh]">
@@ -105,7 +105,7 @@ function Footer() {
                     </h2>
                 </div>
 
-                <div className="flex flex-col mt-16 lg:mt-0 lg:items-end w-full sm:w-auto">
+                <div className="flex flex-col mt-8 sm:mt-16 lg:mt-0 lg:items-end w-full sm:w-auto">
                     <p className="text-[#a1a1a1] text-[1.1rem] sm:text-[1.2rem] mb-8 sm:mb-10 max-w-[320px] lg:text-right font-light leading-relaxed">
                         Open to new connections, collaborations, and speaking engagements.
                     </p>
@@ -147,7 +147,7 @@ function Footer() {
             </div>
 
             {/* Middle Info Section */}
-            <div className="flex flex-col lg:flex-row justify-between w-full mt-[12vh] border-t border-white/10 pt-10 pb-[5vh] z-10">
+            <div className="flex flex-col lg:flex-row justify-between w-full mt-[5vh] sm:mt-[12vh] border-t border-white/10 pt-8 sm:pt-10 pb-[3vh] sm:pb-[5vh] z-10">
                 <div className="flex flex-col gap-2 mb-10 lg:mb-0">
                     <h3 className="text-[#a1a1a1] text-[0.8rem] uppercase tracking-[0.15em] mb-3 font-medium">Local Time</h3>
                     <p className="text-[1.1rem] sm:text-[1.2rem] font-light">Chicago, IL <span className="ml-3 font-medium text-[#CFB88B]">{time}</span></p>
