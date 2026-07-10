@@ -61,6 +61,15 @@ function App() {
     };
   }, [loading]);
 
+  useEffect(() => {
+    if (scrollInstance.current) {
+      const timer = setTimeout(() => {
+        scrollInstance.current.update();
+      }, 600); // Wait for transition animation to complete fully
+      return () => clearTimeout(timer);
+    }
+  }, [location.pathname]);
+
   return (
     <>
       {loading && <Loader onComplete={() => setLoading(false)} />}

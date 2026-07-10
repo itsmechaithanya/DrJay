@@ -353,7 +353,7 @@ function Home() {
                     {/* Mobile-only title just above the marquee */}
                     <div className='absolute z-10 bottom-[22vw] left-[6vw] overflow-hidden md:hidden'>
                         <h1 className='text-[5vw] text-left text-[#d4d4d4] hero-title pb-2'>
-                            AI Trust and <br /> Research Scientist
+                            AI Trust and <br /> Research Scientist 
                         </h1>
                     </div>
                     {/* Desktop-only title on the right */}

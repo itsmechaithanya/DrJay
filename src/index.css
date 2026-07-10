@@ -68,7 +68,6 @@ html,
 body,
 #root {
     background-color: #000000;
-    overflow-x: hidden;
     width: 100%;
 }
 

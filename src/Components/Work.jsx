@@ -3,7 +3,6 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SplitType from 'split-type';
 import image from '../assets/image.png';
-import microsoft from '../assets/micro.png';
 import raiseLabImage from '../assets/1774384265420.jpeg';
 import ssrc from '../assets/ssrc.png';
 import ga1 from '../assets/GA1.png';
