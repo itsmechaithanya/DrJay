@@ -245,7 +245,7 @@ function About() {
                 {/* Cards Container Layered on Top */}
                 <div className="relative z-10 -mt-[100vh]">
                     {/* Card 1 */}
-                    <div className="w-full h-screen flex items-center justify-center">
+                    <div className="w-full h-screen flex items-center justify-center mt-[100vh]">
                         <div className="w-[90vw] md:w-[50vw] aspect-auto md:aspect-square min-h-[500px] md:min-h-0 max-w-[650px] bg-[#141414] text-white rounded-[24px] p-8 md:p-12 flex flex-col justify-between shadow-[0_0_50px_rgba(0,0,0,0.8)] border border-white/10 transition-all duration-300 hover:border-white/20">
                             <div className="text-[5rem] md:text-[6.5rem] font-black leading-none font-gilroy text-white select-none">
                                 1
