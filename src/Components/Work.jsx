@@ -6,7 +6,7 @@ import image from '../assets/image.png';
 import raiseLabImage from '../assets/1774384265420.jpeg';
 import ssrc from '../assets/ssrc.png';
 import ga1 from '../assets/GA1.png';
-import ga2 from '../assets/GA2.png';
+import ga2 from '../assets/GA2.jpg';
 import ga3 from '../assets/GA3.png';
 import gr from '../assets/GR.png';
 import appleSiri from '../assets/as.png';
