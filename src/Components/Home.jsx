@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
-import portrait from '../assets/Jay.jpg';
-import mobilePortrait from '../assets/mobile.png';
-import work1 from '../assets/work1.png';
-import work2 from '../assets/workj2.png';
-import work2Video from '../assets/Work2.mp4';
-import work3 from '../assets/work3.jpg';
+import portrait from '../assets/Jay.webp';
+import mobilePortrait from '../assets/mobile.webp';
+import work1 from '../assets/work1.webp';
+import work2 from '../assets/workj2.webp';
+import work2Videowebm from '../assets/Work2.webm';
+import work2Videomp4 from '../assets/Work2.mp4';
+import work3 from '../assets/work3.webp';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SplitType from 'split-type';
@@ -456,13 +457,15 @@ function Home() {
                         <img src={work2} alt="Work 2" className='w-full h-full object-cover relative z-10' />
                         <video
                             ref={work2VideoRef}
-                            src={work2Video}
                             autoPlay
                             muted
                             loop
                             playsInline
                             className='absolute top-0 left-0 w-full h-full object-cover z-20 transition-opacity duration-500'
-                        />
+                        >
+                            <source src={work2Videowebm} type="video/webm" />
+                            <source src={work2Videomp4} type="video/mp4" />
+                        </video>
                     </div>
                 </div>
 

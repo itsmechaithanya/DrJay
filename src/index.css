@@ -74,6 +74,7 @@ body,
 @media (max-width: 767px) {
     .svg-reveal path {
         stroke: #9B8A69;
-        stroke-width: 1.5px; /* Adjust this value to make the SVG line thicker or thinner on mobile */
+        stroke-width: 1.5px;
+        /* Adjust this value to make the SVG line thicker or thinner on mobile */
     }
 }
