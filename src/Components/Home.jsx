@@ -264,18 +264,38 @@ function Home() {
             return tl;
         }
 
-        const loop = horizontalLoop(items, {
-            paused: false,
-            repeat: -1,
-            speed: 1.5 // Base continuous speed
-        });
+        let loop;
+        
+        const initLoop = () => {
+            const items = gsap.utils.toArray('.marquee-item');
+            if (items.length === 0) return;
+            
+            if (loop) {
+                loop.kill();
+            }
+            
+            loop = horizontalLoop(items, {
+                paused: false,
+                repeat: -1,
+                speed: 1.5 // Base continuous speed
+            });
+        };
+
+        // Initialize loop after fonts have loaded to ensure correct width calculations
+        if (document.fonts) {
+            document.fonts.ready.then(() => {
+                initLoop();
+            });
+        } else {
+            setTimeout(initLoop, 200);
+        }
 
         let scrollTimeout;
         let direction = 1;
         let lastTop = 0;
 
         const tick = () => {
-            if (!marqueeRef.current) {
+            if (!marqueeRef.current || !loop) {
                 return;
             }
 
@@ -300,11 +320,6 @@ function Home() {
             // If the element moved visually on screen
             if (Math.abs(delta) > 0.1) {
                 // delta is negative when scrolling down. Move left (time forward)
-                // Exactly 1:1 match. Loop speed is 1.5 * 100 = 150px/sec.
-                // We add exactly enough time to move the text by `delta` pixels.
-                // MULTIPLY by an extra factor if you want it to feel even faster than 1:1!
-                // But (-delta) / 150 is the mathematically pure 1:1 match.
-                // Let's use 1.5x multiplier to make it feel slightly more responsive to heavy scrolling if 1:1 feels too slow.
                 const visualMultiplier = 1;
                 const scrubAmount = ((-delta) / 150) * visualMultiplier;
 
@@ -316,7 +331,7 @@ function Home() {
 
                 clearTimeout(scrollTimeout);
                 scrollTimeout = setTimeout(() => {
-                    loop.timeScale(direction);
+                    if (loop) loop.timeScale(direction);
                 }, 50);
             }
 
@@ -325,10 +340,22 @@ function Home() {
 
         gsap.ticker.add(tick);
 
+        // Reinitialize loop on resize/orientation change to handle dynamic vw-based sizing
+        let resizeTimeout;
+        const handleResize = () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                initLoop();
+            }, 250);
+        };
+        window.addEventListener('resize', handleResize);
+
         return () => {
-            loop.kill();
+            if (loop) loop.kill();
             gsap.ticker.remove(tick);
             clearTimeout(scrollTimeout);
+            clearTimeout(resizeTimeout);
+            window.removeEventListener('resize', handleResize);
             ScrollTrigger.getAll().forEach(t => t.kill());
             if (handleLoaderComplete) {
                 window.removeEventListener('loaderComplete', handleLoaderComplete);
