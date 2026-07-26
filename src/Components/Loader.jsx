@@ -56,7 +56,7 @@ const Loader = ({ onComplete }) => {
   return (
     <div
       ref={loaderRef}
-      className="fixed inset-0 z-[10000] bg-[#434343] flex items-end justify-end pr-[6vw] pb-[4vh] md:pr-[2vw] md:pb-[2vh]"
+      className="fixed inset-0 z-[10000] bg-[#191919] flex items-end justify-end pr-[6vw] pb-[4vh] md:pr-[2vw] md:pb-[2vh]"
     >
       <h1
         ref={counterRef}
