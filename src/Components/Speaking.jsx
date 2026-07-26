@@ -89,7 +89,7 @@ function Speaking() {
             </div>
 
             <div className="flex flex-col md:flex-row items-start justify-between w-full mb-[8vh] md:mb-[20vh] gap-8 md:gap-0">
-                <div className="w-full md:w-[90%] text-[1.25rem] md:text-[4rem] font-light leading-[1.4] md:leading-[5rem] text-[#e5e5e5]">
+                <div className="w-full md:w-[90%] text-[2rem] md:text-[4rem] font-light leading-[1.4] md:leading-[5rem] text-[#e5e5e5]">
                     Through community participation, design justice, and ethical governance, I promote responsible, human-centered AI systems.
                 </div>
             </div>
@@ -97,7 +97,7 @@ function Speaking() {
             <div className="w-full flex flex-col lg:flex-row gap-12 lg:gap-0 justify-between items-start mb-[12vh] md:mb-[18vh]">
                 {/* Left Column: Quote */}
                 <div className="w-full lg:w-[40%] flex flex-col">
-                    <p className="text-[1.8rem] md:text-[2.2rem] leading-[1.4] text-white font-light tracking-tight">
+                    <p className="text-[1.5rem] md:text-[2.2rem] leading-[1.4] text-white font-light tracking-tight">
                         "Linguistic diversity must not be treated as an edge-case defect; sociolinguistic competence is a fundamental requirement for ethical AI infrastructure."
                     </p>
                     <span className="text-[0.75rem] md:text-[0.9rem] tracking-widest text-[#a1a1a1] mt-4 font-bold block">
@@ -133,12 +133,12 @@ function Speaking() {
                     <div className="grid grid-cols-[auto_1fr] gap-6 md:gap-10 items-start">
                         <span className="text-transparent text-[1.1rem] leading-none select-none pt-1">(00)</span>
                         <div className="pt-2">
-                            <Link
-                                to="/contact"
+                            <a
+                                href="mailto:engage@jaylcunningham.com"
                                 className="inline-block text-[1.05rem] md:text-[1.15rem] text-white hover:text-[#CFB88B] transition-colors duration-300 font-semibold underline underline-offset-[12px] decoration-1 decoration-white/30 hover:decoration-[#CFB88B]"
                             >
                                 Book Jay to speak
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>

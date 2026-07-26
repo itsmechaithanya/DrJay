@@ -212,12 +212,12 @@ function About() {
                 </div>
 
                 <div className="w-full md:w-[20%] flex justify-start md:justify-end text-[1.1rem] font-medium">
-                    <Link
-                        to="/contact"
+                    <a
+                        href="mailto:engage@jaylcunningham.com"
                         className="hover:text-[#CFB88B] transition-colors duration-300"
                     >
                         Collaborate with me
-                    </Link>
+                    </a>
                 </div>
             </div>
             <div className='h-[10vh] w-full'></div>

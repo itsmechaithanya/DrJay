@@ -200,12 +200,12 @@ function Navbar() {
                     <SlideLink to="/publications" className="nav-item hover:text-white transition-colors duration-300">Publications</SlideLink>
                     <SlideLink to="/speaking" className="nav-item hover:text-white transition-colors duration-300">Speaking</SlideLink>
                     <SlideLink to="https://www.raisedepaul.com" className="nav-item hover:text-white transition-colors duration-300">RAISE Lab</SlideLink>
-                    <Link to="/contact" className="nav-item bg-gray-200 text-black px-[3vh] py-[1.2vh] rounded-[3vh] hover:bg-white transition-colors ml-[1vh] overflow-hidden relative" onMouseEnter={handleLinkEnter} onMouseLeave={handleLinkLeave}>
+                    <a href="mailto:engage@jaylcunningham.com" className="nav-item bg-gray-200 text-black px-[3vh] py-[1.2vh] rounded-[3vh] hover:bg-white transition-colors ml-[1vh] overflow-hidden relative" onMouseEnter={handleLinkEnter} onMouseLeave={handleLinkLeave}>
                         <span className='relative overflow-hidden inline-flex flex-col' style={{ height: '1.2em' }}>
                             <span className='link-text-top'>Contact</span>
                             <span className='link-text-bot'>Contact</span>
                         </span>
-                    </Link>
+                    </a>
                 </div>
 
                 {/* Mobile Menu Indicator (Circular Pill trigger) */}
@@ -289,9 +289,9 @@ function Navbar() {
 
                             <div className="overflow-hidden">
                                 <motion.div variants={menuItemVariants}>
-                                    <Link to="/contact" onClick={() => setIsMenuOpen(false)} className="text-[3rem] sm:text-[3.5rem] font-medium tracking-tight text-[#CFB88B] hover:text-white transition-colors duration-300 block">
+                                    <a href="mailto:engage@jaylcunningham.com" onClick={() => setIsMenuOpen(false)} className="text-[3rem] sm:text-[3.5rem] font-medium tracking-tight text-[#CFB88B] hover:text-white transition-colors duration-300 block">
                                         Contact
-                                    </Link>
+                                    </a>
                                 </motion.div>
                             </div>
                         </div>
