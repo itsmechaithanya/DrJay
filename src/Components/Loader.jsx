@@ -56,26 +56,13 @@ const Loader = ({ onComplete }) => {
   return (
     <div
       ref={loaderRef}
-      style={{
-        position: 'fixed',
-        inset: 0,
-        zIndex: 10000,
-        backgroundColor: '#0a0a0a',
-        display: 'flex',
-        alignItems: 'flex-end',
-        justifyContent: 'flex-end',
-        paddingRight: '2vw',
-      }}
+      className="fixed inset-0 z-[10000] bg-[#0a0a0a] flex items-end justify-end pr-[6vw] pb-[4vh] md:pr-[2vw] md:pb-[2vh]"
     >
       <h1
         ref={counterRef}
+        className="text-[25vw] md:text-[12vw] font-light text-white leading-none tracking-tighter"
         style={{
           fontFamily: "'Gilroy', sans-serif",
-          fontSize: '12vw',
-          fontWeight: 300,
-          color: '#ffffff',
-          lineHeight: 1,
-          letterSpacing: '-0.02em',
         }}
       >
         0
