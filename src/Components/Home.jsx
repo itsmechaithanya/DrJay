@@ -314,6 +314,12 @@ function Home() {
 
             const delta = currentTop - lastTop;
 
+            // Ignore initial layout shifts or large jumps (e.g. page load, scroll trigger initialization)
+            if (Math.abs(delta) > 100) {
+                lastTop = currentTop;
+                return;
+            }
+
             // If the element moved visually on screen
             if (Math.abs(delta) > 0.1) {
                 // delta is negative when scrolling down. Move left (time forward)
@@ -338,8 +344,11 @@ function Home() {
         gsap.ticker.add(tick);
 
         // Reinitialize loop on resize/orientation change to handle dynamic vw-based sizing
+        let lastWidth = window.innerWidth;
         let resizeTimeout;
         const handleResize = () => {
+            if (window.innerWidth === lastWidth) return;
+            lastWidth = window.innerWidth;
             clearTimeout(resizeTimeout);
             resizeTimeout = setTimeout(() => {
                 initLoop();
