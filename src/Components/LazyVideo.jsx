@@ -38,6 +38,9 @@ function LazyVideo({
     const videoStyle = {
         opacity: isLoaded ? 1 : 0,
         transition: 'opacity 0.5s ease',
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
         ...style
     };
 

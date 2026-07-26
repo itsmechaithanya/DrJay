@@ -223,8 +223,7 @@ function About() {
             <div className='h-[10vh] w-full'></div>
 
             <div className="flex flex-col md:flex-row items-start w-full mb-[6vh] md:mb-[10vh] gap-10 md:gap-0">
-                {/* Left Column: Video & Socials */}
-                <div className="w-full sm:w-[80%] md:w-[20%] flex flex-col items-start gap-6 md:mr-[10vw]">
+                <div className="w-full sm:w-[80%] md:w-[28%] flex flex-col items-start gap-6 md:mr-[8vw] shrink-0">
                     <div className="w-full aspect-[4/5] overflow-hidden rounded-[2vw] md:rounded-[0.5vw] border border-white/10 shadow-[0_0_5vw_rgba(0,0,0,0.5)]">
                         <LazyVideo
                             srcWebm={vid2Webm}
