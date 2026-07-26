@@ -84,7 +84,7 @@ function Speaking() {
                 <img
                     src={speakkk}
                     alt="Dr. Jay L. Cunningham Speaking"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover grayscale"
                 />
             </div>
 
