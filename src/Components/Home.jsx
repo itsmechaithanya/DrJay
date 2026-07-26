@@ -3,17 +3,15 @@ import portrait from '../assets/Jay.webp';
 import mobilePortrait from '../assets/mobile.webp';
 import work1 from '../assets/work1.webp';
 import work2 from '../assets/workj2.webp';
-import work2Videowebm from '../assets/Work2.webm';
-import work2Videomp4 from '../assets/Work2.mp4';
 import work3 from '../assets/work3.webp';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SplitType from 'split-type';
+import LazyVideo from './LazyVideo';
 
 function Home() {
     const marqueeRef = useRef(null);
     const textRevealRef = useRef(null);
-    const work2VideoRef = useRef(null);
     const boldIdeasRef = useRef(null);
     const portraitRef = useRef(null);
 
@@ -469,30 +467,8 @@ function Home() {
                             </span>
                         </button>
                     </div>
-                    <div className='work-img-reveal w-full md:w-[40%] aspect-2/3 relative overflow-hidden rounded-[2vw] md:rounded-[1vw] border-[0.1vw] border-white/10 shadow-[0_0_5vw_rgba(0,0,0,0.8)] cursor-pointer'
-                        onMouseEnter={() => {
-                            if (work2VideoRef.current) {
-                                work2VideoRef.current.style.opacity = '0';
-                            }
-                        }}
-                        onMouseLeave={() => {
-                            if (work2VideoRef.current) {
-                                work2VideoRef.current.style.opacity = '1';
-                            }
-                        }}
-                    >
+                    <div className='work-img-reveal w-full md:w-[40%] aspect-2/3 relative overflow-hidden rounded-[2vw] md:rounded-[1vw] border-[0.1vw] border-white/10 shadow-[0_0_5vw_rgba(0,0,0,0.8)] cursor-pointer'>
                         <img src={work2} alt="Work 2" className='w-full h-full object-cover relative z-10' />
-                        <video
-                            ref={work2VideoRef}
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                            className='absolute top-0 left-0 w-full h-full object-cover z-20 transition-opacity duration-500'
-                        >
-                            <source src={work2Videowebm} type="video/webm" />
-                            <source src={work2Videomp4} type="video/mp4" />
-                        </video>
                     </div>
                 </div>
 

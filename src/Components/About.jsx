@@ -7,6 +7,7 @@ import vidWebm from '../assets/vid.webm';
 import vidMp4 from '../assets/vid.mp4';
 import vid2Webm from '../assets/vid2.webm';
 import vid2Mp4 from '../assets/vid2.mp4';
+import LazyVideo from './LazyVideo';
 import e1 from '../assets/e1.webp';
 import e2 from '../assets/e2.webp';
 import e3 from '../assets/e3.webp';
@@ -190,16 +191,15 @@ function About() {
                 </div>
             </div>
             <div className="w-full aspect-video overflow-hidden rounded-[2vw] md:rounded-[1vw] border border-white/10 shadow-[0_0_5vw_rgba(0,0,0,0.5)] mb-[8vh] md:mb-[12vh]">
-                <video
+                <LazyVideo
+                    srcWebm={vidWebm}
+                    srcMp4={vidMp4}
                     autoPlay
                     muted
                     loop
                     playsInline
                     className="w-full h-full object-cover"
-                >
-                    <source src={vidWebm} type="video/webm" />
-                    <source src={vidMp4} type="video/mp4" />
-                </video>
+                />
             </div>
 
             <div className="flex flex-col md:flex-row items-start justify-between w-full mb-[8vh] md:mb-[15vh] gap-8 md:gap-0">
@@ -226,16 +226,15 @@ function About() {
                 {/* Left Column: Video & Socials */}
                 <div className="w-full sm:w-[80%] md:w-[20%] flex flex-col items-start gap-6 md:mr-[10vw]">
                     <div className="w-full aspect-[4/5] overflow-hidden rounded-[2vw] md:rounded-[0.5vw] border border-white/10 shadow-[0_0_5vw_rgba(0,0,0,0.5)]">
-                        <video
+                        <LazyVideo
+                            srcWebm={vid2Webm}
+                            srcMp4={vid2Mp4}
                             autoPlay
                             muted
                             loop
                             playsInline
                             className="w-full h-full object-cover"
-                        >
-                            <source src={vid2Webm} type="video/webm" />
-                            <source src={vid2Mp4} type="video/mp4" />
-                        </video>
+                        />
                     </div>
                     {/* Social Icons row matching the screenshot style exactly */}
                     <div className="flex flex-row items-center gap-3 w-full justify-start">
