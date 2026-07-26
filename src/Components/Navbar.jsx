@@ -3,10 +3,52 @@ import { Link, useLocation } from 'react-router-dom';
 import gsap from 'gsap';
 import { motion, AnimatePresence } from 'framer-motion';
 
+const handleLinkEnter = (e) => {
+    const el = e.currentTarget;
+    const top = el.querySelector('.link-text-top');
+    const bot = el.querySelector('.link-text-bot');
+    if (top && bot) {
+        gsap.to(top, { yPercent: -100, duration: 0.3, ease: 'power2.inOut' });
+        gsap.to(bot, { yPercent: -100, duration: 0.3, ease: 'power2.inOut' });
+    }
+};
+
+const handleLinkLeave = (e) => {
+    const el = e.currentTarget;
+    const top = el.querySelector('.link-text-top');
+    const bot = el.querySelector('.link-text-bot');
+    if (top && bot) {
+        gsap.to(top, { yPercent: 0, duration: 0.3, ease: 'power2.inOut' });
+        gsap.to(bot, { yPercent: 0, duration: 0.3, ease: 'power2.inOut' });
+    }
+};
+
+const SlideLink = ({ to, children, className = '' }) => {
+    const isExternal = to.startsWith('http');
+    const content = (
+        <span className='relative overflow-hidden inline-flex flex-col' style={{ height: '1.2em' }}>
+            <span className='link-text-top'>{children}</span>
+            <span className='link-text-bot'>{children}</span>
+        </span>
+    );
+
+    if (isExternal) {
+        return (
+            <a href={to} target="_blank" rel="noopener noreferrer" className={`overflow-hidden relative inline-block ${className}`} onMouseEnter={handleLinkEnter} onMouseLeave={handleLinkLeave}>
+                {content}
+            </a>
+        );
+    }
+
+    return (
+        <Link to={to} className={`overflow-hidden relative inline-block ${className}`} onMouseEnter={handleLinkEnter} onMouseLeave={handleLinkLeave}>
+            {content}
+        </Link>
+    );
+};
+
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isScrolled, setIsScrolled] = useState(false);
-    const [time, setTime] = useState('');
     const lastScrollY = useRef(0);
     const navRef = useRef(null);
     const location = useLocation();
@@ -35,23 +77,6 @@ function Navbar() {
         }
     }, [location]);
 
-    // Live Chicago Time Update
-    useEffect(() => {
-        const updateTime = () => {
-            const options = {
-                timeZone: 'America/Chicago',
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit',
-                hour12: true
-            };
-            const formatter = new Intl.DateTimeFormat('en-US', options);
-            setTime(formatter.format(new Date()));
-        };
-        updateTime();
-        const interval = setInterval(updateTime, 1000);
-        return () => clearInterval(interval);
-    }, []);
 
     // Scroll listener for glassmorphic navbar background on mobile only
     useEffect(() => {
@@ -61,7 +86,6 @@ function Navbar() {
                 ? (window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0)
                 : (target.scrollTop || 0);
 
-            setIsScrolled(currentScrollY > 20);
 
             if (location.pathname === '/') {
                 if (window.innerWidth >= 768) {
@@ -110,48 +134,6 @@ function Navbar() {
         };
     }, []);
 
-    const handleLinkEnter = (e) => {
-        const el = e.currentTarget;
-        const top = el.querySelector('.link-text-top');
-        const bot = el.querySelector('.link-text-bot');
-        if (top && bot) {
-            gsap.to(top, { yPercent: -100, duration: 0.3, ease: 'power2.inOut' });
-            gsap.to(bot, { yPercent: -100, duration: 0.3, ease: 'power2.inOut' });
-        }
-    };
-    const handleLinkLeave = (e) => {
-        const el = e.currentTarget;
-        const top = el.querySelector('.link-text-top');
-        const bot = el.querySelector('.link-text-bot');
-        if (top && bot) {
-            gsap.to(top, { yPercent: 0, duration: 0.3, ease: 'power2.inOut' });
-            gsap.to(bot, { yPercent: 0, duration: 0.3, ease: 'power2.inOut' });
-        }
-    };
-
-    const SlideLink = ({ to, children, className = '' }) => {
-        const isExternal = to.startsWith('http');
-        const content = (
-            <span className='relative overflow-hidden inline-flex flex-col' style={{ height: '1.2em' }}>
-                <span className='link-text-top'>{children}</span>
-                <span className='link-text-bot'>{children}</span>
-            </span>
-        );
-
-        if (isExternal) {
-            return (
-                <a href={to} target="_blank" rel="noopener noreferrer" className={`overflow-hidden relative inline-block ${className}`} onMouseEnter={handleLinkEnter} onMouseLeave={handleLinkLeave}>
-                    {content}
-                </a>
-            );
-        }
-
-        return (
-            <Link to={to} className={`overflow-hidden relative inline-block ${className}`} onMouseEnter={handleLinkEnter} onMouseLeave={handleLinkLeave}>
-                {content}
-            </Link>
-        );
-    };
 
     // Stagger animation variants for mobile menu items
     const menuContainerVariants = {
@@ -217,7 +199,7 @@ function Navbar() {
                     <SlideLink to="/about" className="nav-item hover:text-white transition-colors duration-300">About</SlideLink>
                     <SlideLink to="/publications" className="nav-item hover:text-white transition-colors duration-300">Publications</SlideLink>
                     <SlideLink to="/speaking" className="nav-item hover:text-white transition-colors duration-300">Speaking</SlideLink>
-                    <SlideLink to="https://raiselab.framer.website" className="nav-item hover:text-white transition-colors duration-300">RAISE Lab</SlideLink>
+                    <SlideLink to="https://www.raisedepaul.com" className="nav-item hover:text-white transition-colors duration-300">RAISE Lab</SlideLink>
                     <Link to="/contact" className="nav-item bg-gray-200 text-black px-[3vh] py-[1.2vh] rounded-[3vh] hover:bg-white transition-colors ml-[1vh] overflow-hidden relative" onMouseEnter={handleLinkEnter} onMouseLeave={handleLinkLeave}>
                         <span className='relative overflow-hidden inline-flex flex-col' style={{ height: '1.2em' }}>
                             <span className='link-text-top'>Contact</span>
@@ -299,7 +281,7 @@ function Navbar() {
 
                             <div className="overflow-hidden">
                                 <motion.div variants={menuItemVariants}>
-                                    <a href="https://raiselab.framer.website" target="_blank" rel="noopener noreferrer" className="text-[3rem] sm:text-[3.5rem] font-medium tracking-tight hover:text-[#CFB88B] transition-colors duration-300 flex items-center gap-2">
+                                    <a href="https://www.raisedepaul.com" target="_blank" rel="noopener noreferrer" className="text-[3rem] sm:text-[3.5rem] font-medium tracking-tight hover:text-[#CFB88B] transition-colors duration-300 flex items-center gap-2">
                                         RAISE Lab <svg className="w-6 h-6 text-[#CFB88B]" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
                                     </a>
                                 </motion.div>

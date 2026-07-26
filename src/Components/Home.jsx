@@ -79,7 +79,6 @@ function Home() {
             }
         }
 
-        const items = gsap.utils.toArray('.marquee-item');
 
         if (textRevealRef.current) {
             // Reveal the text container right before GSAP takes over to prevent FOUC (Flash of Unstyled Content)
@@ -88,7 +87,7 @@ function Home() {
             // Split the text into lines and words
             const splitText = new SplitType(textRevealRef.current, { types: 'lines, words' });
 
-            const revealAnim = gsap.fromTo(splitText.words,
+            gsap.fromTo(splitText.words,
                 { opacity: 0, y: 10 }, // Words start hidden and slightly pushed down
                 {
                     opacity: 1,
@@ -263,15 +262,15 @@ function Home() {
         }
 
         let loop;
-        
+
         const initLoop = () => {
             const items = gsap.utils.toArray('.marquee-item');
             if (items.length === 0) return;
-            
+
             if (loop) {
                 loop.kill();
             }
-            
+
             loop = horizontalLoop(items, {
                 paused: false,
                 repeat: -1,
@@ -379,7 +378,7 @@ function Home() {
                     {/* Mobile-only title just above the marquee */}
                     <div className='absolute z-10 bottom-[22vw] left-[6vw] overflow-hidden md:hidden'>
                         <h1 className='text-[5vw] text-left text-[#d4d4d4] hero-title pb-2'>
-                            AI Trust and <br /> Research Scientist 
+                            AI Trust and <br /> Research Scientist
                         </h1>
                     </div>
                     {/* Desktop-only title on the right */}
@@ -422,9 +421,9 @@ function Home() {
                     </p>
                 </div>
 
-                <div className='flex flex-col md:flex-row items-center gap-[6vh] md:gap-[15vw]  w-full px-[7vw] mt-[10vh] md:mt-[15vh] relative z-10'>
-                    <div className='work-img-reveal w-full md:w-[40%] ml-0 md:ml-[4vw] rounded-[2vw] md:rounded-[1vw] border-[0.1vw] border-white/10 shadow-[0_0_5vw_rgba(0,0,0,0.8)] overflow-hidden'>
-                        <img src={work1} alt="Work 1" className='w-full h-auto relative z-10' />
+                <div className='flex flex-col md:flex-row items-center justify-between w-full px-[7vw] mt-[10vh] md:mt-[15vh] relative z-10 gap-[6vh] md:gap-0'>
+                    <div className='work-img-reveal w-full md:w-[40%] aspect-[2/3] relative overflow-hidden ml-0 md:ml-[4vw] rounded-[2vw] md:rounded-[1vw] border-[0.1vw] border-white/10 shadow-[0_0_5vw_rgba(0,0,0,0.8)] cursor-pointer'>
+                        <img src={work1} alt="Work 1" className='w-full h-full object-cover relative z-10' />
                     </div>
                     <div className='work-info w-full md:w-[50%] text-white'>
                         <h2 className='text-[1.8rem] md:text-[2.7rem] font-medium leading-[1.2] mb-[2vh] md:mb-[3vh] w-full md:w-[80%]'>
@@ -433,7 +432,7 @@ function Home() {
                         <p className='text-[1.05rem] md:text-[1.4rem] text-[#a1a1a1] font-light leading-relaxed mt-[3vh] md:mt-[5vh] mb-[2vh] w-full md:w-[95%]'>
                             This article challenges that assumption, arguing that in HCI and design, treating problems and solutions as a fixed pair can reinforce the very inequalities they aim to solve. Using Afro-pessimism, it shows that solutions are often shaped by biased systems, making the problem-solution model a dead end and calling for a more critical approach to justice and design.
                         </p>
-                        <button onMouseEnter={handleBtnEnter} onMouseLeave={handleBtnLeave} className='bg-white text-black px-6 py-[0.8rem] rounded-full font-medium flex items-center justify-center gap-2 hover:bg-gray-200 transition-colors duration-300 w-fit pointer-events-auto overflow-hidden relative mt-[1vh]'>
+                        <a href="https://dl.acm.org/doi/pdf/10.1145/3557890" target="_blank" rel="noopener noreferrer" onMouseEnter={handleBtnEnter} onMouseLeave={handleBtnLeave} className='bg-white text-black px-6 py-[0.8rem] rounded-full font-medium flex items-center justify-center gap-2 hover:bg-gray-200 transition-colors duration-300 w-fit pointer-events-auto overflow-hidden relative mt-[1vh]'>
                             <span className='relative overflow-hidden inline-flex flex-col h-4'>
                                 <span className='btn-text-top text-base h-4 flex items-center justify-center leading-none'>Full Article</span>
                                 <span className='btn-text-bot text-base h-4 flex items-center justify-center leading-none'>Full Article</span>
@@ -443,7 +442,7 @@ function Home() {
                                     <path d="M7 17l9.2-9.2M17 16.8V7H7.2" />
                                 </svg>
                             </span>
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -455,7 +454,7 @@ function Home() {
                         <p className='text-[1.05rem] md:text-[1.4rem] text-[#a1a1a1] font-light leading-relaxed mt-[3vh] md:mt-[5vh] mb-[2vh] w-full'>
                             Mobile banking has transformed financial access, yet its impact on Black communities remains shaped by systemic inequities. This research shows how distrust, structural barriers, and financial literacy gaps hinder inclusion, while Black users actively navigate these systems through strong social and cultural strategies. It calls for more empathetic and equitable fintech design to advance financial justice.
                         </p>
-                        <button onMouseEnter={handleBtnEnter} onMouseLeave={handleBtnLeave} className='bg-white text-black px-6 py-[0.8rem] rounded-full font-medium flex items-center justify-center gap-2 hover:bg-gray-200 transition-colors duration-300 w-fit pointer-events-auto mt-[1vh] overflow-hidden relative'>
+                        <a href="https://dl.acm.org/doi/epdf/10.1145/3532106.3533569" target="_blank" rel="noopener noreferrer" onMouseEnter={handleBtnEnter} onMouseLeave={handleBtnLeave} className='bg-white text-black px-6 py-[0.8rem] rounded-full font-medium flex items-center justify-center gap-2 hover:bg-gray-200 transition-colors duration-300 w-fit pointer-events-auto overflow-hidden relative mt-[1vh]'>
                             <span className='relative overflow-hidden inline-flex flex-col h-4'>
                                 <span className='btn-text-top text-base h-4 flex items-center justify-center leading-none'>Full Article</span>
                                 <span className='btn-text-bot text-base h-4 flex items-center justify-center leading-none'>Full Article</span>
@@ -465,15 +464,15 @@ function Home() {
                                     <path d="M7 17l9.2-9.2M17 16.8V7H7.2" />
                                 </svg>
                             </span>
-                        </button>
+                        </a>
                     </div>
-                    <div className='work-img-reveal w-full md:w-[40%] aspect-2/3 relative overflow-hidden rounded-[2vw] md:rounded-[1vw] border-[0.1vw] border-white/10 shadow-[0_0_5vw_rgba(0,0,0,0.8)] cursor-pointer'>
+                    <div className='work-img-reveal w-full md:w-[40%] aspect-[2/3] relative overflow-hidden rounded-[2vw] md:rounded-[1vw] border-[0.1vw] border-white/10 shadow-[0_0_5vw_rgba(0,0,0,0.8)] cursor-pointer'>
                         <img src={work2} alt="Work 2" className='w-full h-full object-cover relative z-10' />
                     </div>
                 </div>
 
-                <div className='flex flex-col md:flex-row items-center justify-between w-full px-[7vw] mt-[15vh] md:mt-[25vh] relative z-10 ml-0 md:ml-[4vw] gap-[6vh] md:gap-0'>
-                    <div className='work-img-reveal w-full md:w-[40%] aspect-2/3 rounded-[2vw] md:rounded-[1vw] border-[0.1vw] border-white/10 shadow-[0_0_5vw_rgba(0,0,0,0.8)] overflow-hidden'>
+                <div className='flex flex-col md:flex-row items-center justify-between w-full px-[7vw] mt-[15vh] md:mt-[25vh] relative z-10 gap-[6vh] md:gap-0'>
+                    <div className='work-img-reveal w-full md:w-[40%] aspect-[2/3] relative overflow-hidden ml-0 md:ml-[4vw] rounded-[2vw] md:rounded-[1vw] border-[0.1vw] border-white/10 shadow-[0_0_5vw_rgba(0,0,0,0.8)] cursor-pointer'>
                         <img src={work3} alt="Work 3" className='w-full h-full object-cover relative z-10' />
                     </div>
                     <div className='work-info w-full md:w-[50%] text-white pl-0 md:pl-[2vw] pr-0 md:pr-[5vw] flex flex-col'>
@@ -483,7 +482,7 @@ function Home() {
                         <p className='text-[1.05rem] md:text-[1.4rem] text-[#a1a1a1] font-light leading-relaxed mt-[3vh] md:mt-[5vh] mb-[2vh] w-[95%]'>
                             Co-design involves older adults to help younger designers understand their needs, focusing on equal collaboration. A study showed that building balanced partnerships is complex, influenced by shared experiences and clear roles. It also revealed that students became aware of their assumptions and challenges, making the experience educational and meaningful.
                         </p>
-                        <button onMouseEnter={handleBtnEnter} onMouseLeave={handleBtnLeave} className='bg-white text-black px-6 py-[0.8rem] rounded-full font-medium flex items-center justify-center gap-2 hover:bg-gray-200 transition-colors duration-300 w-fit pointer-events-auto mt-[1vh] overflow-hidden relative'>
+                        <a href="https://dl.acm.org/doi/pdf/10.1145/3479506?casa_token=dNTL9KMJ5WMAAAAA:PackdiWQI7XTxMkcgKlGi7V_EJaFTQ3YCP3U4k3fDCGvs3uf7O7RsELy_0XLwCOT8swlkK2fvJGElw" target="_blank" rel="noopener noreferrer" onMouseEnter={handleBtnEnter} onMouseLeave={handleBtnLeave} className='bg-white text-black px-6 py-[0.8rem] rounded-full font-medium flex items-center justify-center gap-2 hover:bg-gray-200 transition-colors duration-300 w-fit pointer-events-auto mt-[1vh] overflow-hidden relative'>
                             <span className='relative overflow-hidden inline-flex flex-col h-4'>
                                 <span className='btn-text-top text-base h-4 flex items-center justify-center leading-none'>Full Article</span>
                                 <span className='btn-text-bot text-base h-4 flex items-center justify-center leading-none'>Full Article</span>
@@ -493,7 +492,7 @@ function Home() {
                                     <path d="M7 17l9.2-9.2M17 16.8V7H7.2" />
                                 </svg>
                             </span>
-                        </button>
+                        </a>
                     </div>
                 </div>
 

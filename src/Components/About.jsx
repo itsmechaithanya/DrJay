@@ -717,7 +717,7 @@ function About() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mb-[8vh] md:mb-[12vh]">
                 {/* Card 1: Seattle Black Valley */}
-                <div className="bg-[#141414] border border-white/10 hover:border-white/20 transition-all duration-300 rounded-[2vw] md:rounded-[1vw] p-8 flex flex-col justify-between min-h-[320px]">
+                <div className=" border border-white/10 rounded-[2vw] md:rounded-[1vw] p-8 flex flex-col justify-between min-h-[320px]">
                     <div className="text-[0.9rem] text-[#CFB88B] uppercase tracking-wider font-semibold font-suisse">(Community Founder)</div>
                     <div className="my-6">
                         <h3 className="text-[1.8rem] font-bold text-white tracking-tight leading-tight mb-3">Seattle Black Valley</h3>
@@ -729,7 +729,7 @@ function About() {
                 </div>
 
                 {/* Card 2: Dog-Dad & Faith */}
-                <div className="bg-[#141414] border border-white/10 hover:border-white/20 transition-all duration-300 rounded-[2vw] md:rounded-[1vw] p-8 flex flex-col justify-between min-h-[320px]">
+                <div className=" border border-white/10 rounded-[2vw] md:rounded-[1vw] p-8 flex flex-col justify-between min-h-[320px]">
                     <div className="text-[0.9rem] text-[#CFB88B] uppercase tracking-wider font-semibold font-suisse">(Personal Core)</div>
                     <div className="my-6">
                         <h3 className="text-[1.8rem] font-bold text-white tracking-tight leading-tight mb-3">Dog-Dad & Faith</h3>
@@ -745,12 +745,12 @@ function About() {
                 <div className="text-[#a1a1a1] text-[1.1rem] font-medium tracking-tight mb-6">(Personal Passions)</div>
                 
                 {/* Passion Row 1: Aviation */}
-                <div className="group border-y border-white/10 hover:border-white/30 transition-all duration-300 py-6 md:py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-0 cursor-default">
+                <div className="border-y border-white/10 py-6 md:py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-0 cursor-default">
                     <div className="flex items-center gap-4 w-full md:w-[35%]">
                         <span className="text-[#a0a0a0] text-sm font-medium font-suisse">(01)</span>
-                        <h4 className="text-[1.5rem] md:text-[2rem] font-semibold text-white tracking-tight group-hover:text-[#CFB88B] transition-colors duration-300">Flight & Aviation</h4>
+                        <h4 className="text-[1.5rem] md:text-[2rem] font-semibold text-white tracking-tight">Flight & Aviation</h4>
                     </div>
-                    <div className="text-[#a0a0a0] text-[1rem] md:text-[1.1rem] w-full md:w-[45%] font-light leading-relaxed group-hover:text-white transition-colors duration-300">
+                    <div className="text-[#a0a0a0] text-[1rem] md:text-[1.1rem] w-full md:w-[45%] font-light leading-relaxed">
                         Currently in flight training to acquire a private pilot's license.
                     </div>
                     <div className="flex flex-wrap gap-2 md:justify-end w-full md:w-[20%]">
@@ -759,12 +759,12 @@ function About() {
                 </div>
 
                 {/* Passion Row 2: Fashion */}
-                <div className="group border-b border-white/10 hover:border-white/30 transition-all duration-300 py-6 md:py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-0 cursor-default">
+                <div className="border-b border-white/10 py-6 md:py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-0 cursor-default">
                     <div className="flex items-center gap-4 w-full md:w-[35%]">
                         <span className="text-[#a0a0a0] text-sm font-medium font-suisse">(02)</span>
-                        <h4 className="text-[1.5rem] md:text-[2rem] font-semibold text-white tracking-tight group-hover:text-[#CFB88B] transition-colors duration-300">Fashion Influencing</h4>
+                        <h4 className="text-[1.5rem] md:text-[2rem] font-semibold text-white tracking-tight">Fashion Influencing</h4>
                     </div>
-                    <div className="text-[#a0a0a0] text-[1rem] md:text-[1.1rem] w-full md:w-[45%] font-light leading-relaxed group-hover:text-white transition-colors duration-300">
+                    <div className="text-[#a0a0a0] text-[1rem] md:text-[1.1rem] w-full md:w-[45%] font-light leading-relaxed">
                         Involved in vintage styling, high-fashion curation, men's fashion, and plus-size fashion.
                     </div>
                     <div className="flex flex-wrap gap-2 md:justify-end w-full md:w-[20%]">
@@ -773,12 +773,12 @@ function About() {
                 </div>
 
                 {/* Passion Row 3: Creative & Arts */}
-                <div className="group border-b border-white/10 hover:border-white/30 transition-all duration-300 py-6 md:py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-0 cursor-default">
+                <div className="border-b border-white/10 py-6 md:py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-0 cursor-default">
                     <div className="flex items-center gap-4 w-full md:w-[35%]">
                         <span className="text-[#a0a0a0] text-sm font-medium font-suisse">(03)</span>
-                        <h4 className="text-[1.5rem] md:text-[2rem] font-semibold text-white tracking-tight group-hover:text-[#CFB88B] transition-colors duration-300">Creative & Arts</h4>
+                        <h4 className="text-[1.5rem] md:text-[2rem] font-semibold text-white tracking-tight">Creative & Arts</h4>
                     </div>
-                    <div className="text-[#a0a0a0] text-[1rem] md:text-[1.1rem] w-full md:w-[45%] font-light leading-relaxed group-hover:text-white transition-colors duration-300">
+                    <div className="text-[#a0a0a0] text-[1rem] md:text-[1.1rem] w-full md:w-[45%] font-light leading-relaxed">
                         Engaging in music production, playing instruments, glass art, abstract painting, and oil painting.
                     </div>
                     <div className="flex flex-wrap gap-2 md:justify-end w-full md:w-[20%]">
@@ -787,12 +787,12 @@ function About() {
                 </div>
 
                 {/* Passion Row 4: Travel */}
-                <div className="group border-b border-white/10 hover:border-white/30 transition-all duration-300 py-6 md:py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-0 cursor-default">
+                <div className="border-b border-white/10 py-6 md:py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-0 cursor-default">
                     <div className="flex items-center gap-4 w-full md:w-[35%]">
                         <span className="text-[#a0a0a0] text-sm font-medium font-suisse">(04)</span>
-                        <h4 className="text-[1.5rem] md:text-[2rem] font-semibold text-white tracking-tight group-hover:text-[#CFB88B] transition-colors duration-300">Travel & Exploration</h4>
+                        <h4 className="text-[1.5rem] md:text-[2rem] font-semibold text-white tracking-tight">Travel & Exploration</h4>
                     </div>
-                    <div className="text-[#a0a0a0] text-[1rem] md:text-[1.1rem] w-full md:w-[45%] font-light leading-relaxed group-hover:text-white transition-colors duration-300">
+                    <div className="text-[#a0a0a0] text-[1rem] md:text-[1.1rem] w-full md:w-[45%] font-light leading-relaxed">
                         Exploring new cities worldwide, taking solo journeys, and visiting exotic locations.
                     </div>
                     <div className="flex flex-wrap gap-2 md:justify-end w-full md:w-[20%]">
@@ -801,12 +801,12 @@ function About() {
                 </div>
 
                 {/* Passion Row 5: Fitness */}
-                <div className="group border-b border-white/10 hover:border-white/30 transition-all duration-300 py-6 md:py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-0 cursor-default">
+                <div className="border-b border-white/10 py-6 md:py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-0 cursor-default">
                     <div className="flex items-center gap-4 w-full md:w-[35%]">
                         <span className="text-[#a0a0a0] text-sm font-medium font-suisse">(05)</span>
-                        <h4 className="text-[1.5rem] md:text-[2rem] font-semibold text-white tracking-tight group-hover:text-[#CFB88B] transition-colors duration-300">Fitness & Outdoors</h4>
+                        <h4 className="text-[1.5rem] md:text-[2rem] font-semibold text-white tracking-tight">Fitness & Outdoors</h4>
                     </div>
-                    <div className="text-[#a0a0a0] text-[1rem] md:text-[1.1rem] w-full md:w-[45%] font-light leading-relaxed group-hover:text-white transition-colors duration-300">
+                    <div className="text-[#a0a0a0] text-[1rem] md:text-[1.1rem] w-full md:w-[45%] font-light leading-relaxed">
                         Maintaining lifestyle balance with cardio routines, Pilates, weight-training, biking, swimming, and hiking.
                     </div>
                     <div className="flex flex-wrap gap-2 md:justify-end w-full md:w-[20%]">
@@ -815,12 +815,12 @@ function About() {
                 </div>
 
                 {/* Passion Row 6: Cooking */}
-                <div className="group border-b border-white/10 hover:border-white/30 transition-all duration-300 py-6 md:py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-0 cursor-default">
+                <div className="border-b border-white/10 py-6 md:py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-0 cursor-default">
                     <div className="flex items-center gap-4 w-full md:w-[35%]">
                         <span className="text-[#a0a0a0] text-sm font-medium font-suisse">(06)</span>
-                        <h4 className="text-[1.5rem] md:text-[2rem] font-semibold text-white tracking-tight group-hover:text-[#CFB88B] transition-colors duration-300">Culinary & Cooking</h4>
+                        <h4 className="text-[1.5rem] md:text-[2rem] font-semibold text-white tracking-tight">Culinary & Cooking</h4>
                     </div>
-                    <div className="text-[#a0a0a0] text-[1rem] md:text-[1.1rem] w-full md:w-[45%] font-light leading-relaxed group-hover:text-white transition-colors duration-300">
+                    <div className="text-[#a0a0a0] text-[1rem] md:text-[1.1rem] w-full md:w-[45%] font-light leading-relaxed">
                         Enjoying cooking Southern soul food, hosting BBQs, cooking fresh seafood, and assembling charcuterie.
                     </div>
                     <div className="flex flex-wrap gap-2 md:justify-end w-full md:w-[20%]">
@@ -829,12 +829,12 @@ function About() {
                 </div>
 
                 {/* Passion Row 7: Real Estate */}
-                <div className="group border-b border-white/10 hover:border-white/30 transition-all duration-300 py-6 md:py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-0 cursor-default">
+                <div className="border-b border-white/10 py-6 md:py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-0 cursor-default">
                     <div className="flex items-center gap-4 w-full md:w-[35%]">
                         <span className="text-[#a0a0a0] text-sm font-medium font-suisse">(07)</span>
-                        <h4 className="text-[1.5rem] md:text-[2rem] font-semibold text-white tracking-tight group-hover:text-[#CFB88B] transition-colors duration-300">Real Estate Investing</h4>
+                        <h4 className="text-[1.5rem] md:text-[2rem] font-semibold text-white tracking-tight">Real Estate Investing</h4>
                     </div>
-                    <div className="text-[#a0a0a0] text-[1rem] md:text-[1.1rem] w-full md:w-[45%] font-light leading-relaxed group-hover:text-white transition-colors duration-300">
+                    <div className="text-[#a0a0a0] text-[1rem] md:text-[1.1rem] w-full md:w-[45%] font-light leading-relaxed">
                         Active in property investments including short-term rentals, multi-family units, and commercial real estate.
                     </div>
                     <div className="flex flex-wrap gap-2 md:justify-end w-full md:w-[20%]">
