@@ -73,8 +73,8 @@ function Speaking() {
 
             <div className="flex flex-col md:flex-row items-start w-full mb-[8vh] md:mb-[12vh]">
                 <div className="w-full pt-3" ref={textRevealRef} style={{ visibility: 'hidden' }}>
-                    <p className="text-[1.15rem] sm:text-[1.5rem] md:text-[3rem] leading-relaxed md:leading-normal text-[#a1a1a1] font-light">
-                        <span className='text-[1rem] sm:text-[1.2rem] md:text-[1.7rem] font-bold pr-[4vw] md:pr-[9vw] text-[#ffffff] block md:inline mb-2 md:mb-0'>Talks</span>
+                    <p className="text-[1.8rem] md:text-[3rem] leading-relaxed md:leading-normal text-[#a1a1a1] font-light">
+                        <span className='text-[1.2rem] md:text-[1.7rem] font-bold pr-[4vw] md:pr-[9vw] text-[#ffffff] block md:inline mb-2 md:mb-0'>Talks</span>
                         A trusted voice in responsible AI and public-interest technology, presenting on design justice, speech equity, policy governance, and community-led engineering.
                     </p>
                 </div>
@@ -97,7 +97,7 @@ function Speaking() {
             <div className="w-full flex flex-col lg:flex-row gap-12 lg:gap-0 justify-between items-start mb-[12vh] md:mb-[18vh]">
                 {/* Left Column: Quote */}
                 <div className="w-full lg:w-[40%] flex flex-col">
-                    <p className="text-[1.35rem] sm:text-[1.6rem] md:text-[2.2rem] leading-[1.4] text-white font-light tracking-tight">
+                    <p className="text-[1.8rem] md:text-[2.2rem] leading-[1.4] text-white font-light tracking-tight">
                         "Linguistic diversity must not be treated as an edge-case defect; sociolinguistic competence is a fundamental requirement for ethical AI infrastructure."
                     </p>
                     <span className="text-[0.75rem] md:text-[0.9rem] tracking-widest text-[#a1a1a1] mt-4 font-bold block">
@@ -111,8 +111,8 @@ function Speaking() {
                     <div className="grid grid-cols-[auto_1fr] gap-6 md:gap-10 items-start">
                         <span className="text-[#a1a1a1] text-[1.1rem] font-medium leading-none pt-1">(01)</span>
                         <div className="flex flex-col gap-4">
-                            <h3 className="text-lg md:text-[1.75rem] font-medium text-white tracking-tight leading-none">About the talks</h3>
-                            <p className="text-sm md:text-base leading-[1.75] text-[#a1a1a1] font-light">
+                            <h3 className="text-[1.5rem] md:text-[1.75rem] font-medium text-white tracking-tight leading-tight">About the talks</h3>
+                            <p className="text-[1.05rem] md:text-[1.15rem] leading-[1.75] text-[#a1a1a1] font-light">
                                 Dr. Jay’s keynotes and seminars offer critical evaluations of the AI lifecycle, placing a particular emphasis on the sociolinguistic, ethical, and governance dimensions of data curation and voice technology. Through cases like ASR performance disparities, he interrogates how automated systems reproduce power dynamics and systemic harms against minoritized groups.
                             </p>
                         </div>
@@ -122,8 +122,8 @@ function Speaking() {
                     <div className="grid grid-cols-[auto_1fr] gap-6 md:gap-10 items-start">
                         <span className="text-[#a1a1a1] text-[1.1rem] font-medium leading-none pt-1">(02)</span>
                         <div className="flex flex-col gap-4">
-                            <h3 className="text-lg md:text-[1.75rem] font-medium text-white tracking-tight leading-none">What you'll learn</h3>
-                            <p className="text-sm md:text-base leading-[1.75] text-[#a1a1a1] font-light">
+                            <h3 className="text-[1.5rem] md:text-[1.75rem] font-medium text-white tracking-tight leading-tight">What you'll learn</h3>
+                            <p className="text-[1.05rem] md:text-[1.15rem] leading-[1.75] text-[#a1a1a1] font-light">
                                 Audiences gain concrete strategies and frameworks for design justice and community co-governance. Dr. Jay demonstrates how to actively embed representational justice throughout the NLP pipeline, transition from diagnostic auditing to structural intervention, and establish community advisory boards to enforce genuine algorithmic accountability.
                             </p>
                         </div>
@@ -135,7 +135,7 @@ function Speaking() {
                         <div className="pt-2">
                             <Link
                                 to="/contact"
-                                className="inline-block text-sm md:text-base text-white hover:text-[#CFB88B] transition-colors duration-300 font-semibold underline underline-offset-[12px] decoration-1 decoration-white/30 hover:decoration-[#CFB88B]"
+                                className="inline-block text-[1.05rem] md:text-[1.15rem] text-white hover:text-[#CFB88B] transition-colors duration-300 font-semibold underline underline-offset-[12px] decoration-1 decoration-white/30 hover:decoration-[#CFB88B]"
                             >
                                 Book Jay to speak
                             </Link>
