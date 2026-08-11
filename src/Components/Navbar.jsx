@@ -194,7 +194,7 @@ function Navbar() {
                 </div>
 
                 {/* Desktop Links */}
-                <div className="hidden md:flex items-center gap-9 text-[1.1rem] font-medium text-[#8f8f8f]">
+                <div className="hidden md:flex items-center gap-9 text-[1rem] font-medium text-[#8f8f8f]">
                     <SlideLink to="/work" className="nav-item hover:text-white transition-colors duration-300">Work</SlideLink>
                     <SlideLink to="/about" className="nav-item hover:text-white transition-colors duration-300">About</SlideLink>
                     <SlideLink to="/publications" className="nav-item hover:text-white transition-colors duration-300">Publications</SlideLink>
