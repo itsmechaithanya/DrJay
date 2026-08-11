@@ -408,10 +408,10 @@ function Home() {
                 <div className='absolute z-10 md:bottom-[-3vh] bottom-[-2vh] left-0 w-full overflow-hidden whitespace-nowrap font-suisse'>
                     <div ref={marqueeRef} className='flex w-max'>
                         <h1 className='md:text-[10vw] text-[30vw] font-suisse font-medium pr-10 marquee-item text-transparent [-webkit-text-stroke:2px_#CFB88B] hover:text-[#CFB88B] transition-colors duration-300'>
-                            AI Trust & Safety Research Scientist &nbsp;&nbsp;&nbsp; Professor at DePaul University School of Computing &nbsp;&nbsp;&nbsp; Founder : AmendLabs x JaliaTechnologies &nbsp;&nbsp;&nbsp;
+                            AI Trust & Safety Research Scientist &nbsp;&nbsp;&nbsp; Professor at DePaul University School of Computing &nbsp;&nbsp;&nbsp; Founder : Solvari System and Insight, LLC &nbsp;&nbsp;&nbsp;
                         </h1>
                         <h1 className='md:text-[10vw] text-[30vw] font-suisse font-medium pr-10 marquee-item text-transparent [-webkit-text-stroke:2px_#CFB88B] hover:text-[#CFB88B] transition-colors duration-300'>
-                            AI Trust & Safety Research Scientist &nbsp;&nbsp;&nbsp; Professor at DePaul University School of Computing &nbsp;&nbsp;&nbsp; Founder : AmendLabs x JaliaTechnologies &nbsp;&nbsp;&nbsp;
+                            AI Trust & Safety Research Scientist &nbsp;&nbsp;&nbsp; Professor at DePaul University School of Computing &nbsp;&nbsp;&nbsp; Founder : Solvari System and Insight, LLC &nbsp;&nbsp;&nbsp;
                         </h1>
                     </div>
                 </div>
