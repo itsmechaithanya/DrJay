@@ -509,7 +509,7 @@ function Home() {
 
                 <div className='flex flex-col-reverse md:flex-row items-center justify-between w-full px-[7vw] mt-[15vh] md:mt-[25vh] relative z-10 gap-[6vh] md:gap-0'>
                     <div className='work-info w-full md:w-[50%] text-white pr-0 md:pr-[2vw] pl-0 md:pl-[5vw] flex flex-col'>
-                        <h2 className='text-[1.8rem] md:text-[2.7rem] font-medium leading-[1.2] mb-[2vh] md:mb-[4vh] w-full md:w-[90%]'>
+                        <h2 className='text-[1.8rem] md:text-[3.2rem] font-medium leading-[1.2] mb-[2vh] md:mb-[4vh] w-full md:w-[90%]'>
                             Impact of Language Tech Disparities on African American Language Speakers
                         </h2>
                         <p className='text-[1.05rem] md:text-[1.4rem] text-[#a1a1a1] font-light leading-relaxed mt-[3vh] md:mt-[5vh] mb-[2vh] w-full'>
