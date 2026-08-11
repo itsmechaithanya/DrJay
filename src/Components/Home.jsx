@@ -488,7 +488,7 @@ function Home() {
                     </div>
                     <div className='work-info w-full md:w-[50%] text-white pl-0 md:pl-[2vw] pr-0 md:pr-[5vw] flex flex-col'>
                         <h2 className='text-[1.8rem] md:text-[3.2rem] font-medium leading-[1.2] mb-[2vh] md:mb-[4vh] w-full md:w-[90%]'>
-                            How might intergenerational design collaborations help older adults in health tech?
+                            How might intergenerational design benefit older adults?
                         </h2>
                         <p className='text-[1.05rem] md:text-[1.4rem] text-[#a1a1a1] font-light leading-relaxed mt-[3vh] md:mt-[5vh] mb-[2vh] w-[95%]'>
                             Co-design involves older adults to help younger designers understand their needs, focusing on equal collaboration. A study showed that building balanced partnerships is complex, influenced by shared experiences and clear roles. It also revealed that students became aware of their assumptions and challenges, making the experience educational and meaningful.
