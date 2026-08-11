@@ -4,6 +4,8 @@ import mobilePortrait from '../assets/mobile.webp';
 import work1 from '../assets/work1.webp';
 import work2 from '../assets/workj2.webp';
 import work3 from '../assets/work3.webp';
+import work4 from '../assets/P1.avif';
+import work5 from '../assets/Home5.avif';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SplitType from 'split-type';
@@ -378,10 +380,10 @@ function Home() {
                             <h1 className='md:text-[1.9rem] text-[1.5rem] text-[#ededed] hero-title pb-2'>This is</h1>
                         </div>
                         <div className='absolute top-8 md:top-18 left-0 overflow-hidden'>
-                            <h1 className='text-[25vw] md:text-[9rem] leading-none whitespace-nowrap font-bold hero-title pb-4'><span className='text-[#ededed]'>Dr.</span>Jay</h1>
+                            <h1 className='text-[25vw] md:text-[11rem] leading-none whitespace-nowrap font-bold hero-title pb-4'><span className='text-[#ededed]'>Dr.</span>Jay</h1>
                         </div>
-                        <div className='absolute top-[calc(2rem+21vw)] md:top-47 left-0 overflow-hidden'>
-                            <h1 className='text-[9vw] md:text-[3.3rem] text-[#ededed] font-light hero-title pb-2'>Cunningham</h1>
+                        <div className='absolute top-[calc(2rem+21vw)] md:top-54 left-0 overflow-hidden'>
+                            <h1 className='text-[9vw] md:text-[4.3rem] text-[#ededed] font-light hero-title pb-2'>Cunningham</h1>
                         </div>
                     </div>
                     {/* Mobile-only title just above the marquee */}
@@ -431,14 +433,14 @@ function Home() {
                 </div>
 
                 <div className='flex flex-col md:flex-row items-center justify-between w-full px-[7vw] mt-[10vh] md:mt-[15vh] relative z-10 gap-[6vh] md:gap-0'>
-                    <div className='work-img-reveal w-full md:w-[40%] aspect-[2/3] relative overflow-hidden ml-0 md:ml-[4vw] rounded-[2vw] md:rounded-[1vw] border-[0.1vw] border-white/10 shadow-[0_0_5vw_rgba(0,0,0,0.8)] cursor-pointer'>
+                    <div className='work-img-reveal w-[90%] md:w-[36%] aspect-[2/3] relative overflow-hidden ml-0 md:ml-[4vw] rounded-[2vw] md:rounded-[1vw] border-[0.1vw] border-white/10 shadow-[0_0_5vw_rgba(0,0,0,0.8)] cursor-pointer'>
                         <img src={work1} alt="Work 1" className='w-full h-full object-cover relative z-10' />
                     </div>
-                    <div className='work-info w-full md:w-[50%] text-white'>
-                        <h2 className='text-[1.8rem] md:text-[2.7rem] font-medium leading-[1.2] mb-[2vh] md:mb-[3vh] w-full md:w-[80%]'>
+                    <div className='work-info w-full md:w-[50%] text-white pl-0 md:pl-[2vw] pr-0 md:pr-[5vw] flex flex-col'>
+                        <h2 className='text-[1.8rem] md:text-[3.2rem] font-medium leading-[1.2] mb-[2vh] md:mb-[4vh] w-full md:w-[90%]'>
                             Why is the solution the end point to a problem?
                         </h2>
-                        <p className='text-[1.05rem] md:text-[1.4rem] text-[#a1a1a1] font-light leading-relaxed mt-[3vh] md:mt-[5vh] mb-[2vh] w-full md:w-[95%]'>
+                        <p className='text-[1.05rem] md:text-[1.4rem] text-[#a1a1a1] font-light leading-relaxed mt-[3vh] md:mt-[5vh] mb-[2vh] w-[95%]'>
                             This article challenges that assumption, arguing that in HCI and design, treating problems and solutions as a fixed pair can reinforce the very inequalities they aim to solve. Using Afro-pessimism, it shows that solutions are often shaped by biased systems, making the problem-solution model a dead end and calling for a more critical approach to justice and design.
                         </p>
                         <a href="https://dl.acm.org/doi/pdf/10.1145/3557890" target="_blank" rel="noopener noreferrer" onMouseEnter={handleBtnEnter} onMouseLeave={handleBtnLeave} className='bg-white text-black px-6 py-[0.8rem] rounded-full font-medium flex items-center justify-center gap-2 hover:bg-gray-200 transition-colors duration-300 w-fit pointer-events-auto overflow-hidden relative mt-[1vh]'>
@@ -457,7 +459,7 @@ function Home() {
 
                 <div className='flex flex-col-reverse md:flex-row items-center justify-between w-full px-[7vw] mt-[15vh] md:mt-[25vh] relative z-10 gap-[6vh] md:gap-0'>
                     <div className='work-info w-full md:w-[50%] text-white pr-0 md:pr-[2vw] pl-0 md:pl-[5vw] flex flex-col'>
-                        <h2 className='text-[1.8rem] md:text-[2.7rem] font-medium leading-[1.2] mb-[2vh] md:mb-[4vh] w-full md:w-[80%]'>
+                        <h2 className='text-[1.8rem] md:text-[3.2rem] font-medium leading-[1.2] mb-[2vh] md:mb-[4vh] w-full md:w-[90%]'>
                             Can FinTech Truly Deliver Financial Inclusion for Black Communities?
                         </h2>
                         <p className='text-[1.05rem] md:text-[1.4rem] text-[#a1a1a1] font-light leading-relaxed mt-[3vh] md:mt-[5vh] mb-[2vh] w-full'>
@@ -475,17 +477,17 @@ function Home() {
                             </span>
                         </a>
                     </div>
-                    <div className='work-img-reveal w-full md:w-[40%] aspect-[2/3] relative overflow-hidden rounded-[2vw] md:rounded-[1vw] border-[0.1vw] border-white/10 shadow-[0_0_5vw_rgba(0,0,0,0.8)] cursor-pointer'>
+                    <div className='work-img-reveal w-[90%] md:w-[36%] aspect-[2/3] relative overflow-hidden mr-0 md:mr-[4vw] rounded-[2vw] md:rounded-[1vw] border-[0.1vw] border-white/10 shadow-[0_0_5vw_rgba(0,0,0,0.8)] cursor-pointer'>
                         <img src={work2} alt="Work 2" className='w-full h-full object-cover relative z-10' />
                     </div>
                 </div>
 
                 <div className='flex flex-col md:flex-row items-center justify-between w-full px-[7vw] mt-[15vh] md:mt-[25vh] relative z-10 gap-[6vh] md:gap-0'>
-                    <div className='work-img-reveal w-full md:w-[40%] aspect-[2/3] relative overflow-hidden ml-0 md:ml-[4vw] rounded-[2vw] md:rounded-[1vw] border-[0.1vw] border-white/10 shadow-[0_0_5vw_rgba(0,0,0,0.8)] cursor-pointer'>
+                    <div className='work-img-reveal w-[90%] md:w-[36%] aspect-[2/3] relative overflow-hidden ml-0 md:ml-[4vw] rounded-[2vw] md:rounded-[1vw] border-[0.1vw] border-white/10 shadow-[0_0_5vw_rgba(0,0,0,0.8)] cursor-pointer'>
                         <img src={work3} alt="Work 3" className='w-full h-full object-cover relative z-10' />
                     </div>
                     <div className='work-info w-full md:w-[50%] text-white pl-0 md:pl-[2vw] pr-0 md:pr-[5vw] flex flex-col'>
-                        <h2 className='text-[1.8rem] md:text-[2.7rem] font-medium leading-[1.2] mb-[2vh] md:mb-[4vh] w-full md:w-[90%]'>
+                        <h2 className='text-[1.8rem] md:text-[3.2rem] font-medium leading-[1.2] mb-[2vh] md:mb-[4vh] w-full md:w-[90%]'>
                             How might intergenerational design collaborations help older adults in health tech?
                         </h2>
                         <p className='text-[1.05rem] md:text-[1.4rem] text-[#a1a1a1] font-light leading-relaxed mt-[3vh] md:mt-[5vh] mb-[2vh] w-[95%]'>
@@ -504,6 +506,58 @@ function Home() {
                         </a>
                     </div>
                 </div>
+
+                <div className='flex flex-col-reverse md:flex-row items-center justify-between w-full px-[7vw] mt-[15vh] md:mt-[25vh] relative z-10 gap-[6vh] md:gap-0'>
+                    <div className='work-info w-full md:w-[50%] text-white pr-0 md:pr-[2vw] pl-0 md:pl-[5vw] flex flex-col'>
+                        <h2 className='text-[1.8rem] md:text-[2.7rem] font-medium leading-[1.2] mb-[2vh] md:mb-[4vh] w-full md:w-[90%]'>
+                            Impact of Language Tech Disparities on African American Language Speakers
+                        </h2>
+                        <p className='text-[1.05rem] md:text-[1.4rem] text-[#a1a1a1] font-light leading-relaxed mt-[3vh] md:mt-[5vh] mb-[2vh] w-full'>
+                            Interviews with 19 African American Language (AAL) speakers reveal the invisible labor required to navigate performance disparities in speech technologies. Linking these failures to a lack of diverse design representation, this study calls for human-centered evaluations that measure real-world impacts on marginalized communities.
+                        </p>
+                        <a href="https://aclanthology.org/2024.findings-acl.761/" target="_blank" rel="noopener noreferrer" onMouseEnter={handleBtnEnter} onMouseLeave={handleBtnLeave} className='bg-white text-black px-6 py-[0.8rem] rounded-full font-medium flex items-center justify-center gap-2 hover:bg-gray-200 transition-colors duration-300 w-fit pointer-events-auto mt-[1vh] overflow-hidden relative'>
+                            <span className='relative overflow-hidden inline-flex flex-col h-4'>
+                                <span className='btn-text-top text-base h-4 flex items-center justify-center leading-none'>Full Article</span>
+                                <span className='btn-text-bot text-base h-4 flex items-center justify-center leading-none'>Full Article</span>
+                            </span>
+                            <span className="btn-icon overflow-hidden flex items-center justify-center shrink-0" style={{ width: 0, opacity: 0, transform: 'translateX(-10px)', marginLeft: '-0.5rem' }}>
+                                <svg width="1.2rem" height="1.2rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M7 17l9.2-9.2M17 16.8V7H7.2" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                    <div className='work-img-reveal w-[90%] md:w-[36%] aspect-[2/3] relative overflow-hidden mr-0 md:mr-[4vw] rounded-[2vw] md:rounded-[1vw] border-[0.1vw] border-white/10 shadow-[0_0_5vw_rgba(0,0,0,0.8)] cursor-pointer'>
+                        <img src={work4} alt="Work 4" className='w-full h-full object-cover relative z-10' />
+                    </div>
+                </div>
+
+                <div className='flex flex-col md:flex-row items-center justify-between w-full px-[7vw] mt-[15vh] md:mt-[25vh] relative z-10 gap-[6vh] md:gap-0'>
+                    <div className='work-img-reveal w-[90%] md:w-[36%] aspect-[2/3] relative overflow-hidden ml-0 md:ml-[4vw] rounded-[2vw] md:rounded-[1vw] border-[0.1vw] border-white/10 shadow-[0_0_5vw_rgba(0,0,0,0.8)] cursor-pointer'>
+                        <img src={work5} alt="Work 5" className='w-full h-full object-cover relative z-10' />
+                    </div>
+                    <div className='work-info w-full md:w-[50%] text-white pl-0 md:pl-[2vw] pr-0 md:pr-[5vw] flex flex-col'>
+                        <h2 className='text-[1.8rem] md:text-[3.2rem] font-medium leading-[1.2] mb-[2vh] md:mb-[4vh] w-full md:w-[90%]'>
+                            Decolonizing Linguistic Policies in Automated Speech Recognition
+                        </h2>
+                        <p className='text-[1.05rem] md:text-[1.4rem] text-[#a1a1a1] font-light leading-relaxed mt-[3vh] md:mt-[5vh] mb-[2vh] w-[95%]'>
+                            ASR failures for Indigenous and non-standard languages function as implicit policies reinforcing historical hierarchies. This study introduces the "Three Harms" taxonomy and a seven-layer situatedness model to address data bias, proposing a participatory framework that empowers affected communities as co-designers of culturally competent speech AI.
+                        </p>
+                        <a href="https://arxiv.org/abs/2608.06141" target="_blank" rel="noopener noreferrer" onMouseEnter={handleBtnEnter} onMouseLeave={handleBtnLeave} className='bg-white text-black px-6 py-[0.8rem] rounded-full font-medium flex items-center justify-center gap-2 hover:bg-gray-200 transition-colors duration-300 w-fit pointer-events-auto mt-[1vh] overflow-hidden relative'>
+                            <span className='relative overflow-hidden inline-flex flex-col h-4'>
+                                <span className='btn-text-top text-base h-4 flex items-center justify-center leading-none'>Full Article</span>
+                                <span className='btn-text-bot text-base h-4 flex items-center justify-center leading-none'>Full Article</span>
+                            </span>
+                            <span className="btn-icon overflow-hidden flex items-center justify-center shrink-0" style={{ width: 0, opacity: 0, transform: 'translateX(-10px)', marginLeft: '-0.5rem' }}>
+                                <svg width="1.2rem" height="1.2rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M7 17l9.2-9.2M17 16.8V7H7.2" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+
 
                 <div className='svg-reveal absolute top-[-27vh] md:top-[-30vh] w-[150%] md:w-full left-[-23vw] md:left-0 z-0 opacity-0 pointer-events-none'>
                     <svg className="w-full h-auto z-0" viewBox="0 0 1274 838" fill="none" xmlns="http://www.w3.org/2000/svg">

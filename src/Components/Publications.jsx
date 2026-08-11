@@ -17,6 +17,7 @@ import p9 from '../assets/p9.avif';
 import p10 from '../assets/p10.avif';
 import p11 from '../assets/p11.avif';
 import p12 from '../assets/p12.avif';
+import Home5 from '../assets/Home5.avif';
 
 function Publications() {
     const [activeCategory, setActiveCategory] = useState('Show all');
@@ -120,20 +121,21 @@ function Publications() {
     const yearFilters = ['Show all', '2026', '2025', '2024', '2023', '2022', '2021'];
 
     const publications = [
-        { id: 1, title: 'Scalable community mentorship: A vision for engineering literacy & access', category: 'HCI', year: '2026', image: p7, link: 'https://ieeexplore.ieee.org/abstract/document/10854949' },
-        { id: 2, title: 'Relational & Somatic Design for Social Robot Mental Well-being', category: 'Education', year: '2026', image: p12, link: 'https://dl.acm.org/doi/full/10.1145/3803784.3816811' },
-        { id: 3, title: 'Should AI mimic people? Understanding AI-supported writing technology among black users', category: 'Education', year: '2025', image: p4, link: 'https://dl.acm.org/doi/abs/10.1145/3757423' },
-        { id: 4, title: 'AVELA-A Vision for Engineering Literacy & Access: Understanding Why Technology Alone Is Not Enough', category: 'AI & Ethics', year: '2025', image: p8, link: 'https://arxiv.org/abs/2401.14581' },
-        { id: 5, title: 'Understanding the Impacts of Language Technologies’ Performance Disparities on African American Language Speakers', category: 'HCI', year: '2024', image: P1, link: 'https://aclanthology.org/2024.findings-acl.761/' },
-        { id: 6, title: 'Towards Equitable Community-Industry Collaborations: Understanding the Experiences of Nonprofits Collaborations with Tech Companies', category: 'Education', year: '2024', image: p3, link: 'https://dl.acm.org/doi/abs/10.1145/3710918' },
-        { id: 7, title: 'Why does HCI view techno-solution as the end point to a social problem?', category: 'HCI', year: '2023', image: work1, link: 'https://dl.acm.org/doi/pdf/10.1145/3557890' },
-        { id: 8, title: 'Designing Inclusive Speech Recognition Systems', category: 'AI & Ethics', year: '2023', image: p2, link: 'https://dl.acm.org/doi/full/10.1145/3544549.3577057' },
-        { id: 9, title: 'The cost of using culture to market financial access in Black communities.', category: 'FinTech', year: '2022', image: work2, link: 'https://dl.acm.org/doi/epdf/10.1145/3532106.3533569' },
-        { id: 10, title: 'Examining and Reflecting on Collaboration with Aging Communities', category: 'HCI', year: '2021', image: work3, link: 'https://dl.acm.org/doi/pdf/10.1145/3479506?casa_token=dNTL9KMJ5WMAAAAA:PackdiWQI7XTxMkcgKlGi7V_EJaFTQ3YCP3U4k3fDCGvs3uf7O7RsELy_0XLwCOT8swlkK2fvJGElw' },
-        { id: 11, title: 'Toward Responsible ASR for African American English Speakers: A Scoping Review of Bias and Equity in Speech Technology', category: 'Education', year: '2021', image: p5, link: 'https://ojs.aaai.org/index.php/AIES/article/view/36580/38718' },
-        { id: 12, title: 'Methods of Designing Justice-oriented Interactive AI Systems', category: 'Education', year: '2021', image: p9, link: 'https://www.proquest.com/openview/af05d2f7eaf256c71a9b9f941212b4ea/1?pq-origsite=gscholar&cbl=18750&diss=y' },
-        { id: 13, title: 'Beyond Participation: Building a Black Community Advisory Board for Computing Research Collaborations', category: 'Education', year: '2021', image: p10, link: 'https://dl.acm.org/doi/abs/10.1145/3805476' },
-        { id: 14, title: 'Advancing NLP Data Equity: Practitioner Responsibility and Accountability in NLP Data Practices', category: 'Education', year: '2021', image: p11, link: 'https://ojs.aaai.org/index.php/AIES/article/view/36581' },
+        { id: 1, title: 'Decolonizing Linguistic Policies in Automated Speech Recognition: A Framework for Cross-Culturally Competent Speech AI', category: 'AI & Ethics', year: '2026', image: Home5, link: 'https://arxiv.org/abs/2608.06141' },
+        { id: 2, title: 'Scalable community mentorship: A vision for engineering literacy & access', category: 'HCI', year: '2026', image: p7, link: 'https://ieeexplore.ieee.org/abstract/document/10854949' },
+        { id: 3, title: 'Relational & Somatic Design for Social Robot Mental Well-being', category: 'Education', year: '2026', image: p12, link: 'https://dl.acm.org/doi/full/10.1145/3803784.3816811' },
+        { id: 4, title: 'Should AI mimic people? Understanding AI-supported writing technology among black users', category: 'Education', year: '2025', image: p4, link: 'https://dl.acm.org/doi/abs/10.1145/3757423' },
+        { id: 5, title: 'AVELA-A Vision for Engineering Literacy & Access: Understanding Why Technology Alone Is Not Enough', category: 'AI & Ethics', year: '2025', image: p8, link: 'https://arxiv.org/abs/2401.14581' },
+        { id: 6, title: 'Understanding the Impacts of Language Technologies Performance Disparities on African American Language Speakers', category: 'HCI', year: '2024', image: P1, link: 'https://aclanthology.org/2024.findings-acl.761/' },
+        { id: 7, title: 'Towards Equitable Community-Industry Collaborations: Understanding the Experiences of Nonprofits Collaborations with Tech Companies', category: 'Education', year: '2024', image: p3, link: 'https://dl.acm.org/doi/abs/10.1145/3710918' },
+        { id: 8, title: 'Why does HCI view techno-solution as the end point to a social problem?', category: 'HCI', year: '2023', image: work1, link: 'https://dl.acm.org/doi/pdf/10.1145/3557890' },
+        { id: 9, title: 'Designing Inclusive Speech Recognition Systems', category: 'AI & Ethics', year: '2023', image: p2, link: 'https://dl.acm.org/doi/full/10.1145/3544549.3577057' },
+        { id: 10, title: 'The cost of using culture to market financial access in Black communities.', category: 'FinTech', year: '2022', image: work2, link: 'https://dl.acm.org/doi/epdf/10.1145/3532106.3533569' },
+        { id: 11, title: 'Examining and Reflecting on Collaboration with Aging Communities', category: 'HCI', year: '2021', image: work3, link: 'https://dl.acm.org/doi/pdf/10.1145/3479506?casa_token=dNTL9KMJ5WMAAAAA:PackdiWQI7XTxMkcgKlGi7V_EJaFTQ3YCP3U4k3fDCGvs3uf7O7RsELy_0XLwCOT8swlkK2fvJGElw' },
+        { id: 12, title: 'Toward Responsible ASR for African American English Speakers: A Scoping Review of Bias and Equity in Speech Technology', category: 'Education', year: '2021', image: p5, link: 'https://ojs.aaai.org/index.php/AIES/article/view/36580/38718' },
+        { id: 13, title: 'Methods of Designing Justice-oriented Interactive AI Systems', category: 'Education', year: '2021', image: p9, link: 'https://www.proquest.com/openview/af05d2f7eaf256c71a9b9f941212b4ea/1?pq-origsite=gscholar&cbl=18750&diss=y' },
+        { id: 14, title: 'Beyond Participation: Building a Black Community Advisory Board for Computing Research Collaborations', category: 'Education', year: '2021', image: p10, link: 'https://dl.acm.org/doi/abs/10.1145/3805476' },
+        { id: 15, title: 'Advancing NLP Data Equity: Practitioner Responsibility and Accountability in NLP Data Practices', category: 'Education', year: '2021', image: p11, link: 'https://ojs.aaai.org/index.php/AIES/article/view/36581' },
     ];
 
     return (
