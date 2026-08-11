@@ -128,12 +128,12 @@ function Footer() {
                     </a>
 
                     <a
-                        href="mailto:info@jalia.tech"
+                        href="mailto:info@solvari.tech"
                         className="group flex items-center justify-between sm:justify-start gap-4 sm:gap-6 text-[4.2vw] sm:text-[1.3rem] lg:text-[2rem] font-light relative cursor-pointer w-full sm:w-auto"
                         onMouseEnter={handleLinkEnter}
                         onMouseLeave={handleLinkLeave}
                     >
-                        <span className="relative z-10 transition-colors duration-300 group-hover:text-white text-[#8f8f8f] break-all sm:break-normal">info@jalia.tech</span>
+                        <span className="relative z-10 transition-colors duration-300 group-hover:text-white text-[#8f8f8f] break-all sm:break-normal">info@solvari.tech</span>
                         <div className="relative w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] rounded-full border border-white/20 flex items-center justify-center overflow-hidden shrink-0">
                             <div className="bg-circle absolute inset-0 bg-white rounded-full opacity-0 scale-0 origin-center"></div>
                             <span className="arrow relative z-10 flex items-center justify-center">
